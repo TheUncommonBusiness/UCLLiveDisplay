@@ -1,0 +1,34 @@
+{
+  "id": "pattern",
+  "description": "Looping background for native editable text overlays",
+  "width": 3840,
+  "height": 2160,
+  "fps": 30,
+  "durationSeconds": 20,
+  "audio": false,
+  "logicalWidth": 1920,
+  "logicalHeight": 1080,
+  "background": "#FDFFF2",
+  "textColor": "#192520",
+  "video": "assets/media/pattern-4k.mp4",
+  "poster": "assets/media/pattern-4k.jpg",
+  "editableTextRects": {
+    "title": {
+      "x": 865,
+      "y": 418,
+      "width": 940,
+      "height": 330,
+      "font": "Season",
+      "fontSize": 127
+    },
+    "subtitle": {
+      "x": 875,
+      "y": 797,
+      "width": 850,
+      "height": 75,
+      "font": "Inter",
+      "fontSize": 34
+    }
+  },
+  "loopVerification": "Source pixels at t=0 and t=20 are identical. Encoded sequence includes frames 0 through 19.9667 seconds, so the repeated endpoint is not duplicated."
+}

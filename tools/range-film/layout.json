@@ -1,0 +1,17 @@
+{
+  "composition": "quiet-range-4k",
+  "canvas": {"width": 3840, "height": 2160},
+  "durationSeconds": 20,
+  "fps": 30,
+  "backgroundOnly": true,
+  "bakedElements": ["brand logo", "horse", "swaying grass", "stars", "Austin footer", "company wordmark"],
+  "editableTextCoordinates": {
+    "coordinateSystem": "1920x1080",
+    "title": {"x": 110, "y": 420, "width": 825, "height": 330, "font": "Season", "fontSizePx": 118, "color": "#FDFFF2"},
+    "subtitle": {"x": 115, "y": 775, "width": 780, "height": 80, "font": "Inter", "fontSizePx": 30, "color": "#FDFFF2"}
+  },
+  "motion": {"grassDegrees": 2.5, "horseRotationDegrees": 0.15, "horseHeightChangePercent": 0.35, "starPeriodsSeconds": [5, 10, 20]},
+  "source": "index.html",
+  "render": "../../assets/media/quiet-range-4k.mp4",
+  "poster": "../../assets/media/quiet-range-4k.jpg"
+}

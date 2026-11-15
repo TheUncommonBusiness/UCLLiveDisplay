@@ -1,0 +1,15 @@
+{
+  "width": 3840,
+  "height": 2160,
+  "fps": 30,
+  "durationSeconds": 20,
+  "sourceLoopBoundary": {
+    "comparedSeconds": [
+      0,
+      20
+    ],
+    "differentPixels": 0,
+    "maxChannelDifference": 0
+  },
+  "notes": "Native vector composition. Original artwork and logo remain stable, with stronger star twinkles and a restrained cowgirl sway."
+}

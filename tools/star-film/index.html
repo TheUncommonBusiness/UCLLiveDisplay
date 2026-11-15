@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=3840,height=2160"><title>Uncommon Leaders | 4K star loop</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:Inter;src:url('assets/inter.ttf');font-weight:100 900}
+*{box-sizing:border-box}html,body{margin:0;background:#192520}
+#root{position:relative;width:3840px;height:2160px;overflow:hidden;color:#FDFFF2;font-family:Inter,Arial,sans-serif}
+.clip{position:absolute}
+.background{inset:0;background:radial-gradient(ellipse at 27% 36%,rgba(106,131,104,.085),transparent 62%),radial-gradient(ellipse at 74% 55%,rgba(0,0,0,.055),transparent 70%),#192520}
+.cowgirl{left:300px;top:385px;width:1060px;height:1418px;background:#FDFFF2;opacity:.64;mask:url('assets/cowgirl-vector.svg') center/contain no-repeat}
+.hero-logo{left:1630px;top:770px;width:1940px;height:624px;background:#F0FE91;mask:url('assets/uncommon-leaders-vector.svg') center/contain no-repeat}
+.star{color:#F0FE91;filter:drop-shadow(0 0 5px #f0fe9135);transform-origin:50% 50%;will-change:opacity,transform}
+.footer-line{left:200px;right:200px;top:1938px;height:2px;background:#FDFFF2;opacity:.22}
+.location{left:200px;top:2007px;height:42px;display:flex;align-items:center;gap:40px;font-size:36px;letter-spacing:3.2px;color:#FDFFF2}
+.location i{display:block;width:25px;height:25px;border-radius:50%;background:#F0FE91}
+.company{right:200px;top:2001px;width:680px;height:51px;background:#FDFFF2;mask:url('assets/company-wordmark.png') center/contain no-repeat}
+</style></head><body>
+<div id="root" data-composition-id="uncommon-leaders-4k" data-width="3840" data-height="2160" data-start="0" data-duration="20" data-fps="30">
+<div id="background" class="clip background" data-start="0" data-duration="20" data-track-index="0"></div>
+<div id="cowgirl" class="clip cowgirl" role="img" aria-label="Original Austin cowgirl illustration" data-start="0" data-duration="20" data-track-index="1"></div>
+<div id="hero-logo" class="clip hero-logo" role="img" aria-label="Uncommon Leaders" data-start="0" data-duration="20" data-track-index="2"></div>
+<div id="footer-line" class="clip footer-line" data-start="0" data-duration="20" data-track-index="3"></div>
+<div id="location" class="clip location" data-layout-ignore data-start="0" data-duration="20" data-track-index="4"><i></i><span>AUSTIN, TEXAS</span></div>
+<div id="company" class="clip company" role="img" aria-label="The Uncommon Business" data-start="0" data-duration="20" data-track-index="5"></div>
+</div>
+<script>
+const duration=20;
+const points=[{x:3510,y:228,size:86,major:true},{x:1850,y:340,size:46,major:true},{x:3240,y:1660,size:54,major:true}];
+for(let i=0;i<62;i++){
+ const x=150+(i*1109)%3510,y=145+(i*463)%1710;
+ if(x>1510&&x<3690&&y>650&&y<1510)continue;
+ if(x>260&&x<1410&&y>340&&y<1840&&i%3!==0)continue;
+ points.push({x,y,size:14+(i*7)%13,major:false});
+}
+window.__starSpecs=points.map((p,i)=>({...p,phase:(i*.61803398875%1)*Math.PI*2,period:[5,10,20][i%3]}));
+const tl=gsap.timeline({paused:true});
+window.__timelines=window.__timelines||{};
+const value=(s,t)=>{
+ const wave=(1-Math.cos(2*Math.PI*t/s.period+s.phase))/2;
+ return {opacity:Number(((s.major?.22:.12)+wave*(s.major?.78:.82)).toFixed(4)),scale:Number(((s.major?.74:.7)+wave*(s.major?.4:.42)).toFixed(4))};
+};
+for(let i=0;i<window.__starSpecs.length;i++){
+ const spec=window.__starSpecs[i],s=document.createElementNS('http://www.w3.org/2000/svg','svg');
+ s.id='twinkle-'+i;s.classList.add('clip','star');s.setAttribute('viewBox','0 0 50 50');s.setAttribute('aria-hidden','true');
+ s.setAttribute('data-start','0');s.setAttribute('data-duration','20');s.setAttribute('data-track-index',String(i+6));
+ s.style.left=spec.x+'px';s.style.top=spec.y+'px';s.style.width=spec.size+'px';s.style.height=spec.size+'px';
+ const shape=document.createElementNS('http://www.w3.org/2000/svg','path');shape.setAttribute('d','M25 0Q28 22 50 25Q28 28 25 50Q22 28 0 25Q22 22 25 0Z');shape.setAttribute('fill','currentColor');s.appendChild(shape);
+ const initial=value(spec,0);s.style.opacity=initial.opacity;s.style.transform='scale('+initial.scale+')';document.getElementById('root').appendChild(s);
+ tl.set(s,initial,0);
+ const keyframes=[];for(let j=1;j<=80;j++)keyframes.push({...value(spec,j*.25),duration:.25,ease:'none'});
+ tl.to(s,{keyframes,ease:'none'},0);
+}
+gsap.set('#cowgirl',{transformOrigin:'50% 92%',rotation:0,y:0});
+const riderFrames=[];for(let j=1;j<=80;j++){const wave=(1-Math.cos(2*Math.PI*j*.25/20))/2;riderFrames.push({rotation:Number((.3*Math.sin(2*Math.PI*j*.25/20)).toFixed(4)),y:Number((-6*wave).toFixed(4)),duration:.25,ease:'none'})}
+tl.set('#cowgirl',{rotation:0,y:0},0);tl.to('#cowgirl',{keyframes:riderFrames,ease:'none'},0);
+window.__timelines['uncommon-leaders-4k']=tl;
+window.seekHold=t=>tl.totalTime(t,false);
+</script></body></html>

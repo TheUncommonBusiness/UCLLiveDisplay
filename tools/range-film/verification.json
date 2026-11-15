@@ -1,0 +1,23 @@
+{
+  "sourceLoopBoundary": {
+    "frame0MatchesFrame20": true,
+    "differentPixels": 0
+  },
+  "encodedAdjacentFrameMeanAbsoluteRGBDifference": {
+    "frame0To1": 0.0870944653420782,
+    "frame598To599": 0.05625570666152263,
+    "wrap599To0": 0.39751997331532923
+  },
+  "video": {
+    "width": 3840,
+    "height": 2160,
+    "fps": 30,
+    "frames": 600,
+    "duration": 20,
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "audio": false,
+    "bytes": 41255557
+  },
+  "validation": "HyperFrames check passed: no lint, runtime, or layout findings. Silent-film advisory is expected."
+}

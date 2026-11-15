@@ -1,0 +1,12 @@
+_reference/
+_qa/
+node_modules/
+.DS_Store
+*.log
+
+**/.hyperframes/
+**/.hf-*/
+**/~$*
+*.tmp
+tools/*/qa/
+tools/character-motion/hat-tip-request.json

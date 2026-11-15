@@ -1,0 +1,34 @@
+{
+  "id": "badge",
+  "description": "Looping background for native editable text overlays",
+  "width": 3840,
+  "height": 2160,
+  "fps": 30,
+  "durationSeconds": 20,
+  "audio": false,
+  "logicalWidth": 1920,
+  "logicalHeight": 1080,
+  "background": "#FDFFF2",
+  "textColor": "#192520",
+  "video": "assets/media/badge-4k.mp4",
+  "poster": "assets/media/badge-4k.jpg",
+  "editableTextRects": {
+    "title": {
+      "x": 110,
+      "y": 365,
+      "width": 940,
+      "height": 340,
+      "font": "Season",
+      "fontSize": 147
+    },
+    "subtitle": {
+      "x": 117,
+      "y": 774,
+      "width": 850,
+      "height": 80,
+      "font": "Inter",
+      "fontSize": 34
+    }
+  },
+  "loopVerification": "Source pixels at t=0 and t=20 are identical. Encoded sequence includes frames 0 through 19.9667 seconds, so the repeated endpoint is not duplicated."
+}
