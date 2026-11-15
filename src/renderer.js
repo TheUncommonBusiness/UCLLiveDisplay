@@ -1,3 +1,4 @@
+import {buildAgendaScene} from './agenda-renderer.js';
 import {buildPresentationScene} from './presentation-renderer.js';
 import {now as currentTime} from './clock.js';
 import {effectiveProgram,loopPosition,remaining,formatTime} from './model.js';
@@ -19,6 +20,7 @@ function stars(parent,preset){
  points.forEach((s,i)=>{const n=document.createElementNS('http://www.w3.org/2000/svg','svg');n.classList.add('twinkle');n.setAttribute('viewBox','0 0 50 50');n.innerHTML='<path fill="currentColor" d="'+starPath+'"/>';pos(n,s.x,s.y,s.size,s.size);const period=[5,10,20][i%3];n.style.setProperty('--period',period+'s');n.style.animationDelay=(-((currentTime()/1000+i*.618*period)%period))+'s';parent.append(n)});
 }
 export function buildScene(preset,state,{showTimer=false}={}){
+ if(preset.layout==='daily-agenda')return buildAgendaScene(preset,state,{showTimer});
  if(preset.layout==='presentation')return buildPresentationScene(preset,state,{showTimer});
  if(!document.getElementById('austin-palette')){const defs=document.createElementNS('http://www.w3.org/2000/svg','svg');defs.style.cssText='position:absolute;width:0;height:0;pointer-events:none';defs.setAttribute('aria-hidden','true');defs.innerHTML='<defs><filter id="austin-palette" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".231 .777 .078 0 -.064 .220 .739 .075 0 -.010 .214 .718 .073 0 -.025 0 0 0 1 0"/></filter></defs>';document.body.append(defs)}
  const root=el('div','scene '+preset.theme+' motion-'+preset.motion+' layout-'+preset.layout);root.dataset.layout=preset.layout;const meta=new Map(),videos=[];let disposed=false,fitted=false;
@@ -96,7 +98,7 @@ export class StageRenderer{
    }
   }
   for(const scene of [a,b].filter(Boolean)){
-   scene.fit();scene.updateTimer(formatTime(this.feed.timer?remaining(this.feed.timer,now):(current.durationSeconds||1200)*1000));
+   scene.update?.(now);scene.fit();scene.updateTimer(formatTime(this.feed.timer?remaining(this.feed.timer,now):(current.durationSeconds||1200)*1000));
    for(const v of scene.videos){if(v.dataset.still==='true'){if(!v.paused)v.pause();continue}if(Number.isFinite(v.duration)&&v.duration>0&&v.readyState>=2){const target=Math.max(0,((p.pausedAt??now)-p.startedAt)/1000)%v.duration;const drift=Math.abs(v.currentTime-target);if(drift>.55&&drift<v.duration-.55)v.currentTime=target;if(p.pausedAt!==null&&p.pausedAt!==undefined){if(!v.paused)v.pause()}else if(v.paused&&!v.error)v.play().catch(()=>{})}}
   }
  }

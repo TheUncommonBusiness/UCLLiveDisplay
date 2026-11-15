@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "style": "editorial",
+      "longTextFits": true,
+      "manualPagePinned": true,
+      "speakerRetained": true
+    },
+    {
+      "style": "night",
+      "longTextFits": true,
+      "manualPagePinned": true,
+      "speakerRetained": true
+    }
+  ],
+  "rotationLastPage": true,
+  "errors": []
+}

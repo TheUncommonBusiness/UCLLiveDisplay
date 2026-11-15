@@ -1,3 +1,6 @@
+import './icons.js';
+import {WEB_TEMPLATES,SCREEN_CATEGORIES,screenCategory} from './screen-library.js';
+import {agendaInspector,initializeAgendaEditor} from './agenda-editor.js';
 import {initializeSessionUI,displayURL,remoteSession} from './session-ui.js';
 import {PRESENTATION_SCENES,getPresentationScene} from '../assets/presentation-system/scenes.js';
 import {now as currentTime} from './clock.js';
@@ -7,82 +10,104 @@ import {StageRenderer} from './renderer.js';
 import {importFiles,exportPayload,loadPayload,downloadJSON} from './media.js';
 
 const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let state=store.get(),feedId=state.feeds[0].id,tab='templates',draft={kind:'preset',preset:clone(PRESENTATION_TEMPLATES[0])},draftEnd=clone(state.feeds[0].endPreset),loopDraft=null,screens=[],toastTimer;
+let state=store.get(),feedId=state.feeds[0].id,tab='templates',screenGroup='titles',agendaWorking=null,draft={kind:'preset',preset:clone(PRESENTATION_TEMPLATES[0])},draftEnd=clone(state.feeds[0].endPreset),loopDraft=null,screens=[],toastTimer;
 const drafts=new Map(),outputs=new Map(),windows=new Map();
 const preview=new StageRenderer($('#draft-stage'),{preview:true}),live=new StageRenderer($('#live-stage'),{preview:true});
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),5000)}
 const run=fn=>async event=>{try{await fn(event)}catch(error){console.error(error);toast(error.message||'That action could not finish.')}};
 const feed=()=>state.feeds.find(f=>f.id===feedId)||state.feeds[0];
 const updateFeed=fn=>store.update(s=>{const f=s.feeds.find(f=>f.id===feedId);if(f)fn(f)});
-function thumb(p){if(p.layout==='presentation')return getPresentationScene(p.sceneId)?.preview||'assets/media/logo.jpg';if(p.layout==='media')return BUILTIN_MEDIA[p.assetId]?.poster||'assets/media/logo.jpg';const id={logo:'logo',range:'range',badge:'intermission',pattern:'pattern',countdown:'starting-soon',session:'session',agenda:'agenda'}[p.layout]||'logo';return 'assets/media/'+id+'.jpg'}
+function thumb(p){if(p.layout==='daily-agenda')return 'assets/agenda/previews/'+p.agendaStyle+'.jpg';if(p.layout==='presentation')return getPresentationScene(p.sceneId)?.preview||'assets/media/logo.jpg';if(p.layout==='media')return BUILTIN_MEDIA[p.assetId]?.poster||'assets/media/logo.jpg';const id={logo:'logo',range:'range',badge:'intermission',pattern:'pattern',countdown:'starting-soon',session:'session',agenda:'agenda'}[p.layout]||'logo';return 'assets/media/'+id+'.jpg'}
 function field(label,key,value,{type='text',area=false,options=null,note='',min,max,step,maxLength=600}={}){const v=esc(value);const control=options?`<select data-field="${key}">${options.map(([id,name])=>`<option value="${esc(id)}" ${id===value?'selected':''}>${esc(name)}</option>`).join('')}</select>`:area?`<textarea data-field="${key}" rows="${key==='agenda'?5:3}" maxlength="${key==='title'?130:maxLength}">${v}</textarea>`:`<input data-field="${key}" value="${v}" type="${type}" ${min!==undefined?`min="${min}" max="${max}" step="${step||1}"`:''} maxlength="${maxLength}">`;return `<label class="field"><span>${label}</span>${control}${note?'<small>'+note+'</small>':''}</label>`}
 function drawFeeds(){
- $('#feed-tabs').innerHTML=state.feeds.map(f=>`<button data-feed="${f.id}" class="${f.id===feedId?'active':''}">${esc(f.name)}</button>`).join('');$('#launch-target').textContent=feed().name;$('#live-feed-name').textContent=feed().name.toUpperCase();$('#display-count').textContent=state.outputs.length;
+ $('#feed-tabs').innerHTML=state.feeds.map(f=>`<button data-feed="${f.id}" class="${f.id===feedId?'active':''}">${esc(f.name)}</button>`).join('');$('#launch-target').textContent=feed().name;$('#live-feed-name').textContent=feed().name.toUpperCase();$('#display-count').textContent=state.outputs.length;$('#destination-summary').textContent=state.outputs.filter(o=>o.feedId===feedId).map(o=>o.name).join(' + ')||'No display assigned';
 }
 function drawLibrary(){
- $('#library-tabs').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));let html='';
+ $('#library-tabs').querySelectorAll('button').forEach(b=>{b.classList.toggle('active',b.dataset.tab===tab);b.setAttribute('aria-pressed',String(b.dataset.tab===tab))});
+ const saved=state.presets.filter(screenCategory);$('#screen-categories').hidden=tab!=='templates';
+ $('#screen-categories').innerHTML=SCREEN_CATEGORIES.filter(([id])=>id!=='saved'||saved.length).map(([id,name])=>`<button data-category="${id}" data-icon="${({titles:'title',agendas:'agenda',holds:'hold',countdowns:'timer',saved:'bookmark'})[id]}" class="${screenGroup===id?'active':''}" aria-pressed="${screenGroup===id}">${name}${id==='saved'?' · '+saved.length:''}</button>`).join('');
+ let html='';
  const card=(p,caption,kind='preset',id=p.id)=>`<button class="template-card ${draft.kind==='preset'&&draft.preset.id===p.id?'selected':''}" data-pick="${esc(id)}" data-kind="${kind}"><img class="template-thumb" src="${thumb(p)}" alt="" loading="lazy"><span class="name">${esc(p.name)}</span><span class="caption">${esc(caption)}</span></button>`;
  if(tab==='templates'){
-  html='<div class="library-subhead">SELECTED PRESENTATION SYSTEM</div>'+PRESENTATION_TEMPLATES.map(p=>card(p,getPresentationScene(p.sceneId).style==='editorial'?'Modern Editorial · content':getPresentationScene(p.sceneId).style==='big-type'?'Big Type · big ideas':'Night Rodeo · section breaks')).join('')+'<div class="library-subhead">AUSTIN HOLD SCREENS</div>'+[TEMPLATES.find(p=>p.id==='cowgirl-moment'),...TEMPLATES.filter(p=>!['media','presentation'].includes(p.layout))].map(p=>card(p,p.layout==='media'?'4K film · motion every 15 seconds':p.kind==='countdown'?'Live countdown · editable':'Animated · editable')).join('');
-  if(state.presets.length)html+='<div class="library-subhead">YOUR SAVED TEMPLATES</div>'+state.presets.map(p=>card(p,store.sessionId?'Shared with this session':'Saved on this computer')).join('');
- }else if(tab==='loops')html='<button class="library-action" id="new-loop">＋ Build a loop</button>'+state.loops.map(l=>`<button class="template-card ${draft.loop?.id===l.id?'selected':''}" data-pick="${l.id}" data-kind="loop"><img class="template-thumb" src="${thumb(l.items[0]?.preset||TEMPLATES[0])}" alt=""><span class="name">${esc(l.name)}</span><span class="caption">${l.items.length} slides · ${l.timerSeconds?'countdown to hold':'repeats continuously'}</span></button>`).join('');
+  const collection=screenGroup==='saved'?saved:WEB_TEMPLATES.filter(p=>screenCategory(p)===screenGroup);
+  html=collection.map(p=>card(p,p.layout==='daily-agenda'?'Daily schedule · choose what’s on now':p.kind==='countdown'?'Timer → chosen hold screen':p.layout==='media'?'4K looping film':screenGroup==='saved'?'Your saved screen':'Editable text · subtle motion')).join('')||'<p class="empty">Save an edited screen to keep it here.</p>';
+ }else if(tab==='loops')html='<button class="library-action" id="new-loop" data-icon="loop">＋ Build a loop</button>'+state.loops.map(l=>`<button class="template-card ${draft.loop?.id===l.id?'selected':''}" data-pick="${l.id}" data-kind="loop"><img class="template-thumb" src="${thumb(l.items[0]?.preset||TEMPLATES[0])}" alt=""><span class="name">${esc(l.name)}</span><span class="caption">${l.items.length} screens · ${l.timerSeconds?'countdown to hold':'repeats continuously'}</span></button>`).join('');
  else{
-  html='<button class="library-action" id="upload-media">＋ Upload photos or video</button>'+card(TEMPLATES.find(p=>p.id==='cowgirl-moment'),'4K master · hat-tip every 15 seconds')+card(TEMPLATES[9],'3840 × 2160 · 20-second loop');
-  const motion=[['range-film','Quiet range background'],['badge-film','Intermission background'],['pattern-film','Austin pattern background']];
-  html+='<div class="library-subhead">EDITABLE FILM TEMPLATES</div>'+motion.map(([id,name],i)=>{const p=clone(TEMPLATES[i+1]);p.id='motion-'+id;p.backgroundId=id;p.name=name;return card(p,'4K film + editable text','motion',id)}).join('');
-  html+='<div class="library-subhead">YOUR UPLOADS</div>'+state.media.map(m=>card({id:m.id,name:m.name,layout:'media',assetId:m.id},m.type==='video'?'Looping video':'Still image','media')).join('');if(!state.media.length)html+='<p class="empty">JPG, PNG, WebP, MP4, or WebM. '+(store.sessionId?'Uploads are shared with the live session.':'Uploads stay on this computer until you export or create a live session.')+'</p>';
+  html='<button class="library-action" id="upload-media" data-icon="upload">＋ Upload photos or video</button>'+state.media.map(m=>card({id:m.id,name:m.name,layout:'media',assetId:m.id},m.type==='video'?'Looping video':'Still image','media')).join('');
+  if(!state.media.length)html+='<p class="empty">Add JPG, PNG, WebP, MP4, or WebM files. '+(store.sessionId?'Files are shared with this live session.':'Create a live session to share them across computers.')+'</p>';
  }
  $('#library-list').innerHTML=html;
 }
+const moreOptions=html=>'<details class="more-options"><summary data-icon="settings">More options</summary><div>'+html+'</div></details>';
 
 function presentationInspector(p){
- const scene=getPresentationScene(p.sceneId);if(!scene)return '';
- let html='<p class="inspector-note">'+esc(scene.style==='editorial'?'Modern Editorial for content.':scene.style==='big-type'?'Big Type for your main idea.':'Night Rodeo for section breaks.')+' The matching PowerPoint uses this same layout and film.</p>';
- const ordered=[...scene.editableFields].sort((a,b)=>{const rank=f=>f.key.startsWith('headline')?0:f.type==='chart'?1:f.key.startsWith('header')||f.key.startsWith('footer')?3:2;return rank(a)-rank(b)});
- for(const item of ordered){
+ const scene=getPresentationScene(p.sceneId);if(!scene)return {main:'',more:''};let main='',more='';
+ const primaryText={'editorial-opening':'text-6','big-type-opening':'text-5','night-rodeo-opening':'text-4'};
+ for(const item of scene.editableFields){
   const value=p.fields?.[item.key]??scene.defaultFields[item.key];
   if(item.type==='chart'){
-   html+='<div class="inspector-divider"><strong>'+esc(item.label)+'</strong>'+field('Category labels, one per line','chart:'+item.key+':labels',value.labels.join('\n'),{area:true,maxLength:720});
-   value.series.forEach((series,i)=>{html+=field('Series '+(i+1)+' name','chart:'+item.key+':name:'+i,series.name,{maxLength:60})+field('Values, separated by commas','chart:'+item.key+':values:'+i,series.values.join(', '),{area:true,maxLength:250})});html+='</div>';
-  }else html+=field(item.label,'scene:'+item.key,value,{area:item.multiline,maxLength:item.maxLength});
+   more+='<div class="inspector-divider"><strong>'+esc(item.label)+'</strong>'+field('Category labels, one per line','chart:'+item.key+':labels',value.labels.join('\n'),{area:true,maxLength:720});
+   value.series.forEach((series,i)=>{more+=field('Series '+(i+1)+' name','chart:'+item.key+':name:'+i,series.name,{maxLength:60})+field('Values, separated by commas','chart:'+item.key+':values:'+i,series.values.join(', '),{area:true,maxLength:250})});more+='</div>';
+  }else if(item.key.startsWith('headline'))main+=field(item.key==='headline-1'?'Title · first line':'Title · second line','scene:'+item.key,value,{area:item.multiline,maxLength:item.maxLength});
+  else if(item.key===primaryText[p.sceneId])main+=field('Supporting line','scene:'+item.key,value,{area:true,maxLength:item.maxLength});
+  else more+=field(item.label.split(' · ')[0],'scene:'+item.key,value,{area:item.multiline,maxLength:item.maxLength});
  }
- return html+field('Motion','motion',p.motion,{options:[['normal','Subtle 15-second loop'],['still','Still']],note:'Text stays steady while the background moves.'});
+ return {main,more};
 }
-
 function drawInspector(){
- let html='';if(draft.kind==='loop')html=`<div class="loop-summary"><strong>${esc(draft.loop.name)}</strong><p>${draft.loop.items.length} slides${draft.loop.timerSeconds?' · '+formatTime(draft.loop.timerSeconds*1000)+' countdown':''}</p></div><button class="edit-loop" id="edit-loop">Edit slide loop</button><p class="inspector-note">The saved sequence is staged in Preview. Launch it when you’re ready for the selected feed to change.</p>`;
- else{const p=draft.preset;html=field('Template name','name',p.name);
-  if(!['logo','media','presentation'].includes(p.layout))html+=field('Main message','title',p.title,{area:true})+field('Supporting line','subtitle',p.subtitle,{area:true});
-  if(p.layout==='presentation')html+=presentationInspector(p);
-  if(p.layout==='session')html+=field('Eyebrow','eyebrow',p.eyebrow)+field('Speaker or host','speaker',p.speaker);
+ let html='';if(draft.kind==='loop')html=`<div class="loop-summary"><strong>${esc(draft.loop.name)}</strong><p>${draft.loop.items.length} screens${draft.loop.timerSeconds?' · '+formatTime(draft.loop.timerSeconds*1000)+' countdown':''}</p></div><button class="edit-loop" id="edit-loop" data-icon="edit">Edit this loop</button><p class="inspector-note">Launch when you’re ready for these screens to start.</p>`;
+ else{
+  const p=draft.preset;let more=field('Saved screen name','name',p.name);
+  if(p.layout==='presentation'){const parts=presentationInspector(p);html+=parts.main;more+=parts.more}
+  else if(p.layout==='daily-agenda')html+=agendaInspector(p);
+  else if(!['logo','media'].includes(p.layout))html+=field('Main message','title',p.title,{area:true})+field('Supporting line','subtitle',p.subtitle,{area:true});
+  if(p.layout==='session')html+=field('Speaker or host','speaker',p.speaker),more+=field('Small heading','eyebrow',p.eyebrow);
   if(p.layout==='agenda')html+=field('Agenda, one item per line','agenda',p.agenda.join('\n'),{area:true});
   if(p.kind==='countdown')html+=field('Countdown, minutes','minutes',p.durationSeconds/60,{type:'number',min:1/60,max:1440,step:0.5});
-  if(!['media','presentation'].includes(p.layout)){if(p.backgroundId)html+='<p class="inspector-note">This film keeps its Austin footer and '+(p.theme==='light'?'warm white':'forest')+' palette.</p>'+field('Motion','motion',p.motion,{options:[['normal','Ambient'],['still','Still']]});else html+=field('Location','location',p.location)+'<div class="field-pair">'+field('Palette','theme',p.theme,{options:[['dark','Forest'],['light','Warm white']]})+field('Motion','motion',p.motion,{options:[['normal','Ambient'],['gentle','Gentle'],['still','Still']]})+'</div>'}
-  if(['range','badge','pattern'].includes(p.layout))html+=field('Animation source','backgroundId',p.backgroundId||'',{options:[['','Live artwork'],[{'range':'range-film','badge':'badge-film','pattern':'pattern-film'}[p.layout],'4K film background']],note:'Film backgrounds keep their original palette. Your text remains editable.'});
-  html+='<button class="save-copy" id="save-template">Save as a template</button>';
-  if(state.presets.some(x=>x.id===p.id))html+='<button class="save-copy quiet danger" id="delete-template">Delete saved template</button>';
+  if(p.layout!=='media'){
+   more+=field('Motion','motion',p.motion,{options:[['normal','Subtle animation'],['still','Still']]});
+   if(!['presentation','daily-agenda'].includes(p.layout)&&!p.backgroundId)more+=field('Palette','theme',p.theme,{options:[['dark','Forest'],['light','Warm white']]})+field('Location','location',p.location);
+  }
+  if(['range','badge','pattern'].includes(p.layout))more+=field('Animation source','backgroundId',p.backgroundId||'',{options:[['','Live artwork'],[{'range':'range-film','badge':'badge-film','pattern':'pattern-film'}[p.layout],'4K film background']]});
+  html+=moreOptions(more)+'<button class="save-copy" id="save-template" data-icon="save">Save a copy</button>';
+  if(state.presets.some(x=>x.id===p.id))html+='<button class="save-copy quiet danger" id="delete-template">Delete saved screen</button>';
  }
- const ends=[...TEMPLATES.filter(p=>p.kind!=='countdown'),...state.presets.filter(p=>p.kind!=='countdown')];
- html+='<div class="inspector-divider">'+field('When the timer reaches zero','end-preset',draftEnd.id,{options:ends.map(p=>[p.id,p.name]),note:'The feed switches to this hold screen and stays there.'})+'</div>';
+ if(draft.kind==='loop'?draft.loop.timerSeconds>0:draft.preset.kind==='countdown'){
+  const ends=[...WEB_TEMPLATES,...state.presets.filter(screenCategory)].filter(p=>p.kind!=='countdown');
+  html+='<div class="inspector-divider">'+field('At zero, show','end-preset',draftEnd.id,{options:ends.map(p=>[p.id,p.name]),note:'This screen holds after the countdown ends.'})+'</div>';
+ }
  $('#inspector-fields').innerHTML=html;
 }
+
+function reflectDraftStatus(){
+ const program=effectiveProgram(feed());let same=false;
+ try{same=draft.kind==='preset'&&program.kind==='preset'&&JSON.stringify(sanitizePreset(draft.preset))===JSON.stringify(sanitizePreset(program.preset));if(draft.kind==='loop'&&program.kind==='loop')same=JSON.stringify(draft.loop.items)===JSON.stringify(program.items)}catch{}
+ $('#draft-status').textContent=same?'On stage':'Ready to launch';$('#draft-status').dataset.status=same?'live':'draft';
+}
 function updatePreview(){
+ reflectDraftStatus();
  $('#draft-title').textContent=draft.kind==='loop'?draft.loop.name:draft.preset.name;
  if(draft.kind==='loop'){if(!draft.startedAt)draft.startedAt=currentTime();preview.setFeed({program:{...clone(draft.loop),id:'preview-loop-'+JSON.stringify(draft.loop),kind:'loop',startedAt:draft.startedAt,pausedAt:null},timer:null,blackout:false},state)}else preview.setPreset(draft.preset,state);
 }
-function choose(p){draft={kind:'preset',preset:clone(p)};updatePreview();drawInspector();drawLibrary()}
+function choose(p){if(draft.kind==='preset'&&draft.preset.layout==='daily-agenda')agendaWorking=clone(draft.preset.schedule);p=clone(p);if(p.layout==='daily-agenda'&&p.id.startsWith('daily-agenda-')&&agendaWorking)p.schedule=clone(agendaWorking);draft={kind:'preset',preset:p};if(tab==='templates'&&screenGroup!=='saved')screenGroup=screenCategory(p)||'titles';updatePreview();drawInspector();drawLibrary()}
 function updateLive(){
+ reflectDraftStatus();
  const f=feed(),p=effectiveProgram(f);live.setFeed(f,state);$('#live-name').textContent=f.blackout?'Blackout':p.kind==='loop'?p.name:p.preset.name;
  $('#blackout').classList.toggle('blackout-active',f.blackout);$('#blackout').textContent=f.blackout?'Restore picture':'Blackout';
  let html='';if(f.timer)html=`<div class="transport-controls"><span class="timer-readout" id="timer-value">${formatTime(remaining(f.timer))}</span><button data-timer="${f.timer.status==='running'&&!expired(f)?'pause':'start'}">${f.timer.status==='running'&&!expired(f)?'Pause':'Start'}</button><button data-timer="reset">Reset</button><button data-timer="add">+1 min</button></div>`;
  if(p.kind==='loop')html+=`<div class="transport-controls"><button data-loop-action="prev" aria-label="Previous slide">←</button><button data-loop-action="pause">${p.pausedAt===null?'Pause loop':'Resume loop'}</button><button data-loop-action="next" aria-label="Next slide">→</button><span class="live-detail" id="loop-position"></span></div>`;
+ if(p.kind==='preset'&&p.preset.layout==='daily-agenda'){
+  const schedule=p.preset.schedule,day=schedule.days.find(d=>d.id===schedule.dayId)||schedule.days[0],active=day.items.findIndex(i=>i.id===day.activeItemId);
+  html+='<div class="agenda-live-controls"><small>'+esc(day.name)+' · '+(active<0?'Full agenda':esc(day.items[active].title||'Current session'))+'</small><button data-live-agenda="next" data-icon="next" '+(active>=day.items.length-1?'disabled':'')+'>Next session ↗</button><button data-live-agenda="overview" data-icon="agenda" '+(active<0?'disabled':'')+'>Full agenda ↗</button></div>';
+ }
  if(!html)html='<div class="live-detail">'+(p.preset?.layout==='media'?'Media loops continuously.':'Holding this screen.')+'</div>';$('#live-transport').innerHTML=html;
 }
 function sync(next){state=next;if(!state.feeds.some(f=>f.id===feedId))feedId=state.feeds[0].id;drawFeeds();updateLive();drawLibrary();$('#storage-status').textContent=store.sessionId?'Shared live session':'Saved on this computer';if($('#display-dialog').open&&!$('#display-rows').contains(document.activeElement))drawDisplays()}
 store.subscribe(sync);store.onMessage(m=>{if(m?.type==='heartbeat'){outputs.set(m.outputId,{...m,at:currentTime()});updateDisplayStatus()}});
 function switchFeed(id){drafts.set(feedId,{draft:clone(draft),end:clone(draftEnd)});feedId=id;const saved=drafts.get(id);if(saved){draft=saved.draft;draftEnd=saved.end}else{const p=effectiveProgram(feed());draft=p.kind==='loop'?{kind:'loop',loop:{id:uid('loop'),name:p.name,items:clone(p.items),timerSeconds:0},startedAt:currentTime()}:{kind:'preset',preset:clone(p.preset)};draftEnd=clone(feed().endPreset)}drawFeeds();drawLibrary();drawInspector();updatePreview();updateLive()}
 $('#feed-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-feed]');if(b)switchFeed(b.dataset.feed)});
-$('#library-tabs').addEventListener('click',e=>{if(e.target.dataset.tab){tab=e.target.dataset.tab;drawLibrary()}});
+$('#library-tabs').addEventListener('click',e=>{if(e.target.dataset.tab){tab=e.target.dataset.tab;if(tab==='templates')screenGroup='titles';drawLibrary()}});
+$('#screen-categories').addEventListener('click',e=>{if(e.target.dataset.category){screenGroup=e.target.dataset.category;drawLibrary()}});
 $('#library-list').addEventListener('click',run(async e=>{
  const b=e.target.closest('button');if(!b)return;if(b.id==='new-loop')return openLoop();if(b.id==='upload-media')return $('#media-input').click();
  if(b.dataset.kind==='loop'){const loop=state.loops.find(l=>l.id===b.dataset.pick);draft={kind:'loop',loop:clone(loop),startedAt:currentTime()};updatePreview();drawInspector();drawLibrary()}
@@ -94,17 +119,22 @@ $('#inspector-fields').addEventListener('input',e=>{const key=e.target.dataset.f
  if(key==='backgroundId'){if(value){draft.preset.theme=['badge-film','pattern-film'].includes(value)?'light':'dark';if(draft.preset.motion==='gentle')draft.preset.motion='normal'}drawInspector()}updatePreview();
 });
 $('#inspector-fields').addEventListener('click',run(async e=>{
- if(e.target.id==='save-template'){const p=sanitizePreset({...draft.preset,id:uid('preset')});await store.update(s=>s.presets.push(p));choose(p);toast('Saved template. The stage has not changed.')}
+ if(e.target.id==='save-template'){const p=sanitizePreset({...draft.preset,id:uid('preset')});await store.update(s=>s.presets.push(p));choose(p);screenGroup='saved';drawLibrary();toast('Saved a copy. The stage has not changed.')}
  if(e.target.id==='delete-template'){const id=draft.preset.id;await store.update(s=>s.presets=s.presets.filter(p=>p.id!==id));choose(TEMPLATES[0]);toast('Saved template deleted. Live screens are unchanged.')}
  if(e.target.id==='edit-loop')openLoop(draft.loop);
 }));
-$('#launch').addEventListener('click',run(async()=>{await updateFeed(f=>{f.endPreset=clone(draftEnd);if(draft.kind==='loop')cueLoop(f,draft.loop);else cuePreset(f,sanitizePreset(draft.preset))});toast('Launched to '+feed().name+'. Open Stage Displays updated in place.')}));
+$('#launch').addEventListener('click',run(async()=>{await updateFeed(f=>{f.endPreset=clone(draftEnd);if(draft.kind==='loop')cueLoop(f,draft.loop);else cuePreset(f,sanitizePreset(draft.preset))});$('#draft-status').textContent='On stage';$('#draft-status').dataset.status='live';toast('Launched to '+feed().name+'.')}));
 $('#hold-logo').addEventListener('click',run(async()=>{await updateFeed(f=>cuePreset(f,TEMPLATES[0]));toast('Logo hold is live on '+feed().name)}));
 $('#blackout').addEventListener('click',run(()=>updateFeed(f=>{f.blackout=!f.blackout})));
 $('#live-transport').addEventListener('click',run(e=>{if(e.target.dataset.timer)return updateFeed(f=>timerAction(f,e.target.dataset.timer));if(e.target.dataset.loopAction)return updateFeed(f=>e.target.dataset.loopAction==='pause'?pauseLoop(f):stepLoop(f,e.target.dataset.loopAction==='next'?1:-1))}));
-$('#add-feed').addEventListener('click',run(async()=>{if(state.feeds.length>=16)return toast('This show already has 16 feeds.');const name=prompt('Name for the new independent feed','Additional display');if(!name?.trim())return;const f=newFeed(uid('feed'),name.trim());await store.update(s=>s.feeds.push(f));switchFeed(f.id)}));
-$('#rename-feed').addEventListener('click',run(async()=>{const name=prompt('Feed name',feed().name);if(name?.trim())await updateFeed(f=>f.name=name.trim())}));
-function openLoop(loop){loopDraft=loop?clone(loop):{id:uid('loop'),name:'New Austin loop',timerSeconds:0,items:[]};$('#loop-name').value=loopDraft.name;$('#loop-timer').value=loopDraft.timerSeconds/60;const options=[...TEMPLATES.filter(p=>p.kind!=='countdown'),...state.presets.filter(p=>p.kind!=='countdown'),...state.media.map(m=>({...TEMPLATES[9],id:m.id,name:m.name,assetId:m.id}))];$('#loop-add-select').innerHTML=options.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');drawLoopItems();$('#loop-dialog').showModal()}
+$('#live-transport').addEventListener('click',run(async e=>{
+ const action=e.target.dataset.liveAgenda;if(!action)return;
+ await updateFeed(f=>{const program=effectiveProgram(f);if(program.kind!=='preset'||program.preset.layout!=='daily-agenda')return;const p=clone(program.preset),day=p.schedule.days.find(d=>d.id===p.schedule.dayId)||p.schedule.days[0],index=day.items.findIndex(i=>i.id===day.activeItemId);day.activeItemId=action==='overview'?'':day.items[Math.min(index+1,day.items.length-1)]?.id||'';cuePreset(f,p)});
+ toast('Agenda updated on '+feed().name+'.');
+}));
+$('#add-feed').addEventListener('click',run(async()=>{if(state.feeds.length>=16)return toast('This show already has 16 feeds.');const name=prompt('Name for the new display group','Additional screens');if(!name?.trim())return;const f=newFeed(uid('feed'),name.trim());await store.update(s=>s.feeds.push(f));switchFeed(f.id)}));
+$('#rename-feed').addEventListener('click',run(async()=>{const name=prompt('Display group name',feed().name);if(name?.trim())await updateFeed(f=>f.name=name.trim())}));
+function openLoop(loop){loopDraft=loop?clone(loop):{id:uid('loop'),name:'New Austin loop',timerSeconds:0,items:[]};$('#loop-name').value=loopDraft.name;$('#loop-timer').value=loopDraft.timerSeconds/60;const options=[...WEB_TEMPLATES.filter(p=>p.kind!=='countdown'),...state.presets.filter(p=>screenCategory(p)&&p.kind!=='countdown'),...state.media.map(m=>({...TEMPLATES[9],id:m.id,name:m.name,assetId:m.id}))];$('#loop-add-select').innerHTML=options.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');drawLoopItems();$('#loop-dialog').showModal()}
 function drawLoopItems(){$('#loop-items').innerHTML=loopDraft.items.map((item,i)=>`<div class="loop-item" data-item="${i}"><span class="overline">${String(i+1).padStart(2,'0')}</span><span class="item-name">${esc(item.preset.name)}</span><label>Hold, sec<input data-item-field="seconds" type="number" min="1" max="3600" value="${item.seconds}"></label><label>Transition<select data-item-field="transition">${Object.entries(TRANSITIONS).map(([key,name])=>`<option value="${key}" ${key===item.transition?'selected':''}>${name}</option>`).join('')}</select></label><label>Fade, sec<input data-item-field="transitionSeconds" type="number" min="0.25" max="5" step="0.25" value="${item.transitionSeconds}" ${item.transition==='cut'?'disabled':''}></label><div class="reorder"><button data-item-action="up" aria-label="Move slide ${i+1} up" ${i===0?'disabled':''}>↑</button><button data-item-action="down" aria-label="Move slide ${i+1} down" ${i===loopDraft.items.length-1?'disabled':''}>↓</button><button data-item-action="remove" aria-label="Remove slide ${i+1}">×</button></div></div>`).join('')||'<p class="empty">Add screens above, then set their order and timing.</p>'}
 $('#loop-add-item').addEventListener('click',()=>{if(loopDraft.items.length>=200)return toast('A loop can contain up to 200 slides.');const id=$('#loop-add-select').value,m=state.media.find(m=>m.id===id);const p=m?{...clone(TEMPLATES[9]),id:m.id,name:m.name,assetId:m.id}:getPreset(state,id);loopDraft.items.push(itemFromPreset(p));drawLoopItems()});
 $('#loop-items').addEventListener('change',e=>{const row=e.target.closest('[data-item]');if(row&&e.target.dataset.itemField){const key=e.target.dataset.itemField;loopDraft.items[Number(row.dataset.item)][key]=key==='transition'?e.target.value:Number(e.target.value);drawLoopItems()}});
@@ -113,9 +143,9 @@ $('#loop-save').addEventListener('click',run(async()=>{loopDraft.name=$('#loop-n
 $('#loop-delete').addEventListener('click',run(async()=>{await store.update(s=>s.loops=s.loops.filter(l=>l.id!==loopDraft.id));$('#loop-dialog').close();choose(TEMPLATES[0]);toast('Loop removed from the library. Live feeds keep playing.')}));
 function drawDisplays(){
  const monitors=[['','Move manually'],...screens.map((s,i)=>[String(i),s.label||'Monitor '+(i+1)])];
- $('#display-rows').innerHTML=state.outputs.map(o=>`<div class="display-row" data-output="${o.id}"><label>Display name<input data-output-field="name" value="${esc(o.name)}" maxlength="60"></label><label>Feed<select data-output-field="feedId">${state.feeds.map(f=>`<option value="${f.id}" ${f.id===o.feedId?'selected':''}>${esc(f.name)}</option>`).join('')}</select></label><label>Scale<select data-output-field="fit">${[['fit','Fit'],['fill','Fill / crop'],['stretch','Stretch']].map(([id,name])=>`<option value="${id}" ${id===o.fit?'selected':''}>${name}</option>`).join('')}</select></label><label>Margin, %<input data-output-field="safe" type="number" min="0" max="10" value="${o.safe}"></label><label>Monitor<select data-output-field="screenIndex">${monitors.map(([id,name])=>`<option value="${id}" ${id===(o.screenIndex===null?'':String(o.screenIndex))?'selected':''}>${esc(name)}</option>`).join('')}</select></label><button data-open="${o.id}" class="primary">Open ↗</button><button data-remove-output="${o.id}" class="icon-button" aria-label="Remove ${esc(o.name)}">×</button><span class="display-status"><span id="status-${o.id}">Not open</span><a href="${esc(displayURL(o.id))}" target="_blank" rel="noopener">Open as browser tab ↗</a></span></div>`).join('');updateDisplayStatus();
+ $('#display-rows').innerHTML=state.outputs.map(o=>`<div class="display-row" data-output="${o.id}"><label>Display name<input data-output-field="name" value="${esc(o.name)}" maxlength="60"></label><label>Display group<select data-output-field="feedId">${state.feeds.map(f=>`<option value="${f.id}" ${f.id===o.feedId?'selected':''}>${esc(f.name)}</option>`).join('')}</select></label><label>Scale<select data-output-field="fit">${[['fit','Fit'],['fill','Fill / crop'],['stretch','Stretch']].map(([id,name])=>`<option value="${id}" ${id===o.fit?'selected':''}>${name}</option>`).join('')}</select></label><label>Margin, %<input data-output-field="safe" type="number" min="0" max="10" value="${o.safe}"></label><label>Monitor<select data-output-field="screenIndex">${monitors.map(([id,name])=>`<option value="${id}" ${id===(o.screenIndex===null?'':String(o.screenIndex))?'selected':''}>${esc(name)}</option>`).join('')}</select></label><button data-open="${o.id}" class="primary">Open ↗</button><button data-remove-output="${o.id}" class="icon-button" aria-label="Remove ${esc(o.name)}">×</button><span class="display-status"><span id="status-${o.id}">Not open</span><a href="${esc(displayURL(o.id))}" target="_blank" rel="noopener">Open as browser tab ↗</a></span></div>`).join('');updateDisplayStatus();
 }
-function updateDisplayStatus(){for(const o of state.outputs){const n=document.getElementById('status-'+o.id),m=outputs.get(o.id);if(n)n.textContent=m&&currentTime()-m.at<7000?`Connected · ${m.width} × ${m.height} · ${m.fullscreen?'Full screen':'Windowed'}${m.mediaError?' · MEDIA ERROR: '+m.mediaError:''}`:'Not open in this browser'}}
+function updateDisplayStatus(){for(const o of state.outputs){const n=document.getElementById('status-'+o.id),m=outputs.get(o.id);if(n)n.textContent=m&&currentTime()-m.at<7000?`Connected · ${m.width} × ${m.height} · ${m.fullscreen?'Full screen':'Windowed'}${m.mediaError?' · MEDIA ERROR: '+m.mediaError:''}`:'Waiting for display'}}
 function openOutput(o){const screen=screens[o.screenIndex],features=screen?`popup=yes,left=${screen.availLeft},top=${screen.availTop},width=${screen.availWidth},height=${screen.availHeight}`:'popup=yes,width=1280,height=720';let w=windows.get(o.id);if(w&&!w.closed){w.focus();return true}w=window.open(displayURL(o.id),'ucl-stage-'+(store.sessionId||'local')+'-'+o.id,features);if(w){windows.set(o.id,w);return true}toast('Allow pop-ups for this site, then use Open on each display.');return false}
 $('#displays-button').addEventListener('click',()=>{drawDisplays();$('#display-dialog').showModal()});
 $('#display-rows').addEventListener('click',run(async e=>{const id=e.target.dataset.open;if(id)return openOutput(state.outputs.find(o=>o.id===id));const remove=e.target.dataset.removeOutput;if(remove){windows.get(remove)?.close();await store.update(s=>s.outputs=s.outputs.filter(o=>o.id!==remove));drawDisplays()}}));
@@ -128,9 +158,11 @@ $('#media-input').addEventListener('change',run(async e=>{if(!e.target.files.len
 $('#export-show').addEventListener('click',run(async e=>{e.target.disabled=true;try{toast('Packing show and uploaded media…');downloadJSON(await exportPayload(state),'ucl-show-'+new Date().toISOString().slice(0,10)+'.json');toast('Show exported with uploaded media.')}finally{e.target.disabled=false}}));
 $('#import-show').addEventListener('click',()=>$('#show-input').click());
 $('#show-input').addEventListener('change',run(async e=>{const file=e.target.files[0];if(!file)return;if(!confirm('Importing replaces this computer’s saved show and updates its open Stage Displays. Export your current show first if you need to keep it.')){e.target.value='';return}const next=await loadPayload(JSON.parse(await file.text()),sanitizeState);for(const f of next.feeds){f.program.id=uid('program');f.program.startedAt=currentTime();if(f.timer){f.timer.status='paused';f.timer.remainingMs=f.timer.durationMs;f.timer.endAt=null}}await store.replace(next);drafts.clear();switchFeed(next.feeds[0].id);e.target.value='';toast('Show imported. Countdown timers are paused until you start them.')}));
+document.querySelector('.show-menu').addEventListener('click',e=>{if(e.target.closest('button,a'))document.querySelector('.show-menu').open=false});
 $('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
 setInterval(()=>{const f=feed(),timer=$('#timer-value');if(timer)timer.textContent=expired(f)?'Finished':formatTime(remaining(f.timer));const p=effectiveProgram(f),n=$('#loop-position');if(n&&p.kind==='loop')n.textContent=(loopPosition(p).index+1)+' / '+p.items.length;if(expired(f)&&$('#live-name').textContent!==f.endPreset.name)updateLive();updateDisplayStatus()},250);
 if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(async registration=>{await navigator.serviceWorker.ready;const ready=registration.active||registration.waiting||registration.installing;if(ready)$('#offline-status').textContent='Offline files ready';navigator.serviceWorker.addEventListener('message',e=>{if(e.data?.type==='cache-ready')$('#offline-status').textContent='Offline files ready'})}).catch(()=>{$('#offline-status').textContent='Online mode';});else $('#offline-status').textContent='Online mode';
+initializeAgendaEditor({getPreset:()=>draft.kind==='preset'?draft.preset:null,onChange:()=>{drawInspector();updatePreview()},onNotice:toast});
 drawFeeds();drawLibrary();drawInspector();updatePreview();updateLive();if(store.error)toast('The last saved show could not be read. Export a fresh backup after setup.');
 // Initialize storage so output windows share the exact same running clock.
 if(!store.sessionId)await store.update(()=>{});

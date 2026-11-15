@@ -1,3 +1,4 @@
+import {AGENDA_PRESETS,sanitizeSchedule} from './agenda.js';
 import {PRESENTATION_SCENES,getPresentationScene} from '../assets/presentation-system/scenes.js';
 import {now as currentTime} from './clock.js';
 export const VERSION=1;
@@ -21,7 +22,8 @@ export const TEMPLATES=[
  preset('starting','We’re starting','badge',{title:"We're\nstarting.",subtitle:'Welcome back.',theme:'light'}),
  preset('film','4K logo film','media',{kind:'media',assetId:'stars-film'}),
  preset('cowgirl-moment','Cowgirl · a moment of motion','media',{kind:'media',assetId:'cowgirl-film'}),
- ...PRESENTATION_TEMPLATES
+ ...PRESENTATION_TEMPLATES,
+ ...AGENDA_PRESETS
 ];
 export const BUILTIN_MEDIA={
  'cowgirl-film':{id:'cowgirl-film',name:'Cowgirl · motion every 15 seconds',type:'video',mime:'video/mp4',url:'assets/media/character-hat-tip-4k.mp4',poster:'assets/media/character-hat-tip-4k.jpg',builtin:true},
@@ -98,7 +100,8 @@ export function sanitizePresentationFields(scene, values={}) {
 
 export function sanitizePreset(p){
  if(!p||typeof p!=='object')throw new Error('Invalid screen template.');
- const layouts=['logo','range','badge','pattern','countdown','session','agenda','media','presentation'];if(!layouts.includes(p.layout))throw new Error('Unsupported template layout.');
+ const layouts=['logo','range','badge','pattern','countdown','session','agenda','media','presentation','daily-agenda'];if(!layouts.includes(p.layout))throw new Error('Unsupported template layout.');
+ if(p.layout==='daily-agenda')return {...base,id:text(p.id,100)||uid('preset'),name:text(p.name,80)||'Daily agenda',layout:'daily-agenda',kind:'hold',title:text(p.title,110)||'Today at Uncommon Leaders',agendaStyle:p.agendaStyle==='night'?'night':'editorial',theme:p.agendaStyle==='night'?'dark':'light',motion:p.motion==='still'?'still':'normal',schedule:sanitizeSchedule(p.schedule)};
  if(p.layout==='presentation'){const scene=getPresentationScene(p.sceneId);if(!scene)throw new Error('Unknown presentation layout.');return {...base,id:text(p.id,100)||uid('preset'),name:text(p.name,80)||scene.name,layout:'presentation',kind:'hold',sceneId:scene.id,fields:sanitizePresentationFields(scene,p.fields),motion:p.motion==='still'?'still':'normal',theme:scene.style==='night-rodeo'?'dark':'light'};}
  const assetId=p.assetId===null?null:text(p.assetId,100);if(assetId&&!/^[a-zA-Z0-9-]+$/.test(assetId))throw new Error('Invalid media reference.');
  return {...base,id:text(p.id,100)||uid('preset'),name:text(p.name,80)||'Saved screen',layout:p.layout,kind:p.layout==='countdown'?'countdown':p.layout==='media'?'media':'hold',title:text(p.title,130),eyebrow:text(p.eyebrow,80),subtitle:text(p.subtitle,160),speaker:text(p.speaker,120),location:text(p.location,70),theme:p.backgroundId==='range-film'?'dark':['badge-film','pattern-film'].includes(p.backgroundId)?'light':p.theme==='light'?'light':'dark',motion:['still','gentle','normal'].includes(p.motion)?p.motion:'normal',durationSeconds:clamp(p.durationSeconds,1,86400,1200),agenda:Array.isArray(p.agenda)?p.agenda.slice(0,6).map(x=>text(x,100)):[],assetId,backgroundId:['range-film','badge-film','pattern-film'].includes(p.backgroundId)?p.backgroundId:null};

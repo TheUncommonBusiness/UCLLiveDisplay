@@ -17,15 +17,15 @@ async function choose(p,id){await p.click('[data-tab="templates"]');await p.clic
 try{
  const c1=await context();control=await c1.newPage();await control.goto(base);await ready(control);
  await check('Selected presentation layouts edit and remain separate from live output',async()=>{
-  assert.equal(await control.locator('[data-pick^="presentation-"]').count(),26);
+  assert.equal(await control.locator('[data-pick^="presentation-"]').count(),3);
   await choose(control,'presentation-editorial-opening');
   const before=(await getState(control)).feeds[0].program.id;
   await control.fill('[data-field="scene:headline-1"]','Remote rehearsal');
   assert.equal((await getState(control)).feeds[0].program.id,before);
-  await control.selectOption('[data-field="motion"]','still');await control.click('#launch');
+  await control.click('.more-options summary');await control.selectOption('[data-field="motion"]','still');await control.click('#launch');
   const launched=(await getState(control)).feeds[0].program.preset;
   assert.equal(launched.fields['headline-1'],'Remote rehearsal');assert.equal(launched.motion,'still');
-  return {sharedLayouts:26,editable:true};
+  return {titleLayouts:3,editable:true};
  });
  await control.locator('#media-input').setInputFiles({name:'remote-rehearsal-dot.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jddkAAAAASUVORK5CYII=','base64')});
  await until(async()=>(await getState(control)).media.length===1,'Synthetic image did not save');
@@ -94,6 +94,11 @@ try{
   await c2.setOffline(false);await matches(stage,'The next chapter');
   assert.ok(await stage.evaluate(()=>Boolean(document.fullscreenElement)));
   return {heldLastScreen:true,reconnected:true};
+ });
+ await check('Daily agendas and manual current-session changes reach remote full-screen stages',async()=>{
+  await backup.click('[data-tab="templates"]');await backup.click('[data-category="agendas"]');await backup.click('[data-pick="daily-agenda-night"]');await backup.selectOption('[data-agenda-current]','session-2');await backup.click('#launch');
+  await stage.waitForFunction(()=>document.querySelector('#stage .scene')?.dataset.layout==='daily-agenda'&&document.querySelector('#stage .scene')?.dataset.activeIndex==='1');
+  await backup.click('[data-live-agenda="next"]');await stage.waitForFunction(()=>document.querySelector('#stage .scene')?.dataset.activeIndex==='2');assert.ok(await stage.evaluate(()=>Boolean(document.fullscreenElement)));return {manualSelection:true,fullscreenPreserved:true};
  });
  await check('A cached countdown finishes while the stage laptop is offline',async()=>{
   await backup.evaluate(async()=>{const {store}=await import('./src/store.js'),m=await import('./src/model.js');await store.update(s=>{m.cuePreset(s.feeds[0],{...m.TEMPLATES[4],durationSeconds:4});s.feeds[0].endPreset={...m.TEMPLATES[8],title:'Remote timer finished'}})});

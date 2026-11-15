@@ -20,9 +20,15 @@ Sessions expire after 30 days. Uploaded media supports 250 MiB per file, 50 file
 
 The isolated session service is [hosted here](https://ucl-live-sessions.the-uncommon-6173.chatgpt.site). It uses durable state, revision checks to prevent stale controllers overwriting a newer cue, and authenticated media access. Session credentials stay in link fragments. The backend source checkout is in remote-service and has its own deployment repository.
 
-## Matching presentation system
+## Screens and daily agendas
 
-Modern Editorial is the content style, Big Type handles big ideas, and Night Rodeo marks section breaks. The console includes 26 editable layouts from the same scene definitions used by the [34-slide PowerPoint kit](backups/ucl-matched-presentation-kit.pptx). Both use the same four restrained 15-second 4K background movies, with editable foreground text, shapes, and charts.
+The web library is organized into Titles, Agendas, Holds, and Countdowns. Titles use Modern Editorial, Big Type, Night Rodeo, and the session introduction. The broader content layouts remain in the [34-slide PowerPoint kit](backups/ucl-matched-presentation-kit.pptx).
+
+Choose a screen, edit the preview, then Launch to Stage. Text appears first in the editor. Branding and motion controls sit under More options, and countdown end screens appear only when a timer is in use. Import, export, the guide, and PowerPoint are under More in the top bar. Icons keep the controls recognizable alongside their labels.
+
+Two daily-agenda designs share an editable schedule: a light timetable and a forest Night Rodeo layout. Use Edit daily agendas to enter up to seven days, each with up to 30 sessions, optional dates, times, titles, and speakers. Choose the day and highlighted session in Preview, then Launch. The operator controls the highlight. Next session and Full agenda in the On stage panel update the running display immediately.
+
+The overview shows six sessions per page and rotates every 15 seconds. Choosing a current session keeps its page in view and labels the next session. Saved agenda copies and their days survive show exports and can be added to loops. Changing the agenda design preserves the entered schedule.
 
 [PowerPoint preview](backups/ucl-matched-presentation-kit-preview.pdf) · [Editing notes](presentation-system/readme.md)
 
