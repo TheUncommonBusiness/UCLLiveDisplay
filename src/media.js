@@ -1,9 +1,11 @@
 import {BUILTIN_MEDIA,uid} from './model.js';
-let dbPromise;const urls=new Map();
+let dbPromise,remoteDownload=null;const urls=new Map(),pendingDownloads=new Map();
+export function setRemoteMediaProvider(provider){remoteDownload=provider}
+export async function ensureBlob(id){let blob=await readBlob(id);if(blob)return blob;if(!remoteDownload)return null;if(!pendingDownloads.has(id))pendingDownloads.set(id,(async()=>{const downloaded=await remoteDownload(id);await writeBlobs([{id,blob:downloaded}]);return downloaded})().finally(()=>pendingDownloads.delete(id)));return pendingDownloads.get(id)}
 function db(){if(!dbPromise)dbPromise=new Promise((resolve,reject)=>{const r=indexedDB.open('ucl-live-display-media',1);r.onupgradeneeded=()=>r.result.createObjectStore('media',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});return dbPromise}
 export async function readBlob(id){const d=await db();return new Promise((resolve,reject)=>{const r=d.transaction('media').objectStore('media').get(id);r.onsuccess=()=>resolve(r.result?.blob);r.onerror=()=>reject(r.error)})}
 export async function writeBlobs(records){const d=await db();return new Promise((resolve,reject)=>{const t=d.transaction('media','readwrite');records.forEach(r=>t.objectStore('media').put(r));t.oncomplete=resolve;t.onerror=()=>reject(t.error);t.onabort=()=>reject(t.error||new Error('Media storage is full.'))})}
-export async function mediaURL(id){if(BUILTIN_MEDIA[id])return BUILTIN_MEDIA[id].url;if(!/^upload-[a-zA-Z0-9-]+$/.test(id||''))throw new Error('Unknown media.');if(urls.has(id))return urls.get(id);const blob=await readBlob(id);if(!blob)throw new Error('This media is not on this computer. Import the complete show file.');const url=URL.createObjectURL(blob);urls.set(id,url);return url}
+export async function mediaURL(id){if(BUILTIN_MEDIA[id])return BUILTIN_MEDIA[id].url;if(!/^upload-[a-zA-Z0-9-]+$/.test(id||''))throw new Error('Unknown media.');if(urls.has(id))return urls.get(id);const blob=await ensureBlob(id);if(!blob)throw new Error('This media is not on this computer. Import the complete show file.');const url=URL.createObjectURL(blob);urls.set(id,url);return url}
 export function mediaInfo(id,state){return BUILTIN_MEDIA[id]||state.media.find(m=>m.id===id)}
 export async function importFiles(files){
  const records=[],metadata=[];
@@ -13,7 +15,7 @@ export async function importFiles(files){
 }
 function dataURL(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}
 export async function exportPayload(state){
- const media=[];for(const m of state.media){const blob=await readBlob(m.id);if(!blob)throw new Error('Missing media: '+m.name+'. Reimport it before exporting.');media.push({id:m.id,mime:m.mime,data:await dataURL(blob)})}
+ const media=[];for(const m of state.media){const blob=await ensureBlob(m.id);if(!blob)throw new Error('Missing media: '+m.name+'. Reimport it before exporting.');media.push({id:m.id,mime:m.mime,data:await dataURL(blob)})}
  return {format:'ucl-live-display',version:1,createdAt:new Date().toISOString(),show:state,uploads:media};
 }
 export async function loadPayload(payload,normalize){

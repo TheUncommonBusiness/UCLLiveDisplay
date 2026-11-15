@@ -10,3 +10,7 @@ node_modules/
 *.tmp
 tools/*/qa/
 tools/character-motion/hat-tip-request.json
+
+# Isolated session-service checkout is deployed through Sites.
+/remote-service/
+presentation-system/qa/

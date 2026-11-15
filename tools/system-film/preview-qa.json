@@ -1,0 +1,162 @@
+{
+  "ok": true,
+  "errors": [],
+  "scenes": [
+    {
+      "id": "editorial-opening",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "editorial-content",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "big-type-opening",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "night-rodeo-opening",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-section",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-agenda",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-big-idea",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-quote",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-two-columns",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-text-image",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-pillars",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-comparison",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-before-after",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-process-three",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-process-five",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-timeline",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-matrix",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-framework",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-metric",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-metrics",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-bar-chart",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-line-chart",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-case-study",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-exercise",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-faq",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    },
+    {
+      "id": "toolkit-closing",
+      "ok": true,
+      "fits": [],
+      "overflow": []
+    }
+  ]
+}

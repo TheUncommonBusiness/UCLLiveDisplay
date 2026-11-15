@@ -1,0 +1,78 @@
+[
+  {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 3840,
+        "height": 2160,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "nb_frames": "450"
+      }
+    ],
+    "format": {
+      "duration": "15.000000"
+    },
+    "file": "assets/media/system-big-type.mp4",
+    "bytes": 2497204
+  },
+  {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 3840,
+        "height": 2160,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "nb_frames": "450"
+      }
+    ],
+    "format": {
+      "duration": "15.000000"
+    },
+    "file": "assets/media/system-editorial-clean.mp4",
+    "bytes": 124434
+  },
+  {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 3840,
+        "height": 2160,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "nb_frames": "450"
+      }
+    ],
+    "format": {
+      "duration": "15.000000"
+    },
+    "file": "assets/media/system-editorial-portrait.mp4",
+    "bytes": 8574983
+  },
+  {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 3840,
+        "height": 2160,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "nb_frames": "450"
+      }
+    ],
+    "format": {
+      "duration": "15.000000"
+    },
+    "file": "assets/media/system-night-rodeo.mp4",
+    "bytes": 7876283
+  }
+]

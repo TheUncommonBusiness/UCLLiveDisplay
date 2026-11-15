@@ -1,0 +1,2256 @@
+[
+  {
+    "slide": 1,
+    "id": "matched-guide",
+    "name": "Start here",
+    "role": "guide",
+    "style": "editorial",
+    "editableFields": []
+  },
+  {
+    "slide": 2,
+    "id": "editorial-opening",
+    "name": "Modern Editorial / Opening",
+    "role": "opening",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-portrait",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 392
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 01",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 31
+      },
+      {
+        "key": "headline-2",
+        "label": "Headline · 2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 33
+      },
+      {
+        "key": "text-5",
+        "label": "A PERSPECTIVE FOR THE ROOM",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 148
+      },
+      {
+        "key": "text-6",
+        "label": "The next chapter starts with how we choose to lead.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 144
+      },
+      {
+        "key": "text-7",
+        "label": "FIG. 01 / THE UNCOMMON WAY",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 172
+      },
+      {
+        "key": "footer-8",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-9",
+        "label": "Footer · 01",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "id": "editorial-content",
+    "name": "Modern Editorial / Content",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 02",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 66
+      },
+      {
+        "key": "headline-2",
+        "label": "Headline · 2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 22
+      },
+      {
+        "key": "text-5",
+        "label": "SMALL CHANGES. SHARED DIRECTION.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 268
+      },
+      {
+        "key": "text-6",
+        "label": "01",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 40
+      },
+      {
+        "key": "text-7",
+        "label": "Clarity",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 27
+      },
+      {
+        "key": "text-8",
+        "label": "Make the next priority clear.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 128
+      },
+      {
+        "key": "text-9",
+        "label": "02",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 40
+      },
+      {
+        "key": "text-10",
+        "label": "Ownership",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 29
+      },
+      {
+        "key": "text-11",
+        "label": "Give the work a clear owner.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 128
+      },
+      {
+        "key": "text-12",
+        "label": "03",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 40
+      },
+      {
+        "key": "text-13",
+        "label": "Momentum",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 28
+      },
+      {
+        "key": "text-14",
+        "label": "Turn decisions into next steps.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 128
+      },
+      {
+        "key": "footer-15",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-16",
+        "label": "Footer · 02",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "id": "big-type-opening",
+    "name": "Big Type / Opening",
+    "role": "opening",
+    "style": "big-type",
+    "backgroundMedia": "system-big-type",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · 01 / A NEW STANDARD",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 184
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 31
+      },
+      {
+        "key": "headline-2",
+        "label": "Headline · 2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 33
+      },
+      {
+        "key": "text-4",
+        "label": "UNCOMMON LEADERS LIVE / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 328
+      },
+      {
+        "key": "text-5",
+        "label": "A different standard for how we lead.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 106
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "id": "night-rodeo-opening",
+    "name": "Night Rodeo / Opening",
+    "role": "opening",
+    "style": "night-rodeo",
+    "backgroundMedia": "system-night-rodeo",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS LIVE / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 212
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 31
+      },
+      {
+        "key": "headline-2",
+        "label": "Headline · 2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 33
+      },
+      {
+        "key": "text-4",
+        "label": "A DIFFERENT STANDARD FOR HOW WE LEAD",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 404
+      },
+      {
+        "key": "footer-5",
+        "label": "Footer · 04 / AFTER DARK",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 176
+      },
+      {
+        "key": "footer-6",
+        "label": "Footer · OPENING / 01",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 120
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "id": "toolkit-section",
+    "name": "Section divider",
+    "role": "content",
+    "style": "night-rodeo",
+    "backgroundMedia": "system-night-rodeo",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS LIVE / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 212
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 38
+      },
+      {
+        "key": "headline-2",
+        "label": "Headline · 2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 39
+      },
+      {
+        "key": "text-4",
+        "label": "[ONE SENTENCE THAT SETS UP THIS SECTION.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 404
+      },
+      {
+        "key": "footer-5",
+        "label": "Footer · 01 / SECTION",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 176
+      },
+      {
+        "key": "footer-6",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 120
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "id": "toolkit-agenda",
+    "name": "Agenda",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 04",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "01",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 22
+      },
+      {
+        "key": "text-5",
+        "label": "[Topic 1]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 36
+      },
+      {
+        "key": "text-6",
+        "label": "[A short description of this part.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 160
+      },
+      {
+        "key": "text-7",
+        "label": "02",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 22
+      },
+      {
+        "key": "text-8",
+        "label": "[Topic 2]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 36
+      },
+      {
+        "key": "text-9",
+        "label": "[A short description of this part.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 160
+      },
+      {
+        "key": "text-10",
+        "label": "03",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 22
+      },
+      {
+        "key": "text-11",
+        "label": "[Topic 3]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 36
+      },
+      {
+        "key": "text-12",
+        "label": "[A short description of this part.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 160
+      },
+      {
+        "key": "text-13",
+        "label": "04",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 22
+      },
+      {
+        "key": "text-14",
+        "label": "[Topic 4]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 36
+      },
+      {
+        "key": "text-15",
+        "label": "[A short description of this part.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 160
+      },
+      {
+        "key": "footer-16",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-17",
+        "label": "Footer · 04",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "id": "toolkit-big-idea",
+    "name": "Big idea",
+    "role": "content",
+    "style": "big-type",
+    "backgroundMedia": "system-big-type",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · 01 / A NEW STANDARD",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 184
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 36
+      },
+      {
+        "key": "headline-2",
+        "label": "Headline · 2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 40
+      },
+      {
+        "key": "text-4",
+        "label": "UNCOMMON LEADERS LIVE / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 328
+      },
+      {
+        "key": "text-5",
+        "label": "[One sentence that makes the idea concrete.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 106
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "id": "toolkit-quote",
+    "name": "Quote + attribution",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 06",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "headline-2",
+        "label": "Headline · 2",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 120
+      },
+      {
+        "key": "text-5",
+        "label": "[Name, role or source]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "text-6",
+        "label": "[Context or date]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 170
+      },
+      {
+        "key": "footer-7",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-8",
+        "label": "Footer · 06",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 10,
+    "id": "toolkit-two-columns",
+    "name": "Two-column text",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 07",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "[First idea]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 34
+      },
+      {
+        "key": "text-5",
+        "label": "[Point one, stated clearly.]  [Point two, with enoug",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 680
+      },
+      {
+        "key": "text-6",
+        "label": "[Second idea]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 34
+      },
+      {
+        "key": "text-7",
+        "label": "[Point one, stated clearly.]  [Point two, with enoug",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 680
+      },
+      {
+        "key": "footer-8",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-9",
+        "label": "Footer · 07",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 11,
+    "id": "toolkit-text-image",
+    "name": "Text + image",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 08",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "[Explain the image in one clear thought.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 68
+      },
+      {
+        "key": "text-5",
+        "label": "[Add the context your audience needs. Keep this to a",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 264
+      },
+      {
+        "key": "text-6",
+        "label": "ADD YOUR IMAGE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-7",
+        "label": "[Caption or source]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 116
+      },
+      {
+        "key": "footer-8",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-9",
+        "label": "Footer · 08",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 12,
+    "id": "toolkit-pillars",
+    "name": "Three pillars",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 09",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "01",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 22
+      },
+      {
+        "key": "text-5",
+        "label": "[Pillar 1]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-6",
+        "label": "[One sentence that explains why this pillar matters.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 192
+      },
+      {
+        "key": "text-7",
+        "label": "02",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 22
+      },
+      {
+        "key": "text-8",
+        "label": "[Pillar 2]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-9",
+        "label": "[One sentence that explains why this pillar matters.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 192
+      },
+      {
+        "key": "text-10",
+        "label": "03",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 22
+      },
+      {
+        "key": "text-11",
+        "label": "[Pillar 3]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-12",
+        "label": "[One sentence that explains why this pillar matters.",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 192
+      },
+      {
+        "key": "footer-13",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-14",
+        "label": "Footer · 09",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 13,
+    "id": "toolkit-comparison",
+    "name": "Two-way comparison",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 10",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "[Option A]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 32
+      },
+      {
+        "key": "text-5",
+        "label": "[Criterion one]  [Criterion two]  [Criterion three]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 462
+      },
+      {
+        "key": "text-6",
+        "label": "[Option B]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 32
+      },
+      {
+        "key": "text-7",
+        "label": "[Criterion one]  [Criterion two]  [Criterion three]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 462
+      },
+      {
+        "key": "footer-8",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-9",
+        "label": "Footer · 10",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 14,
+    "id": "toolkit-before-after",
+    "name": "Before + after",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 11",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "BEFORE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 84
+      },
+      {
+        "key": "text-5",
+        "label": "[The current state]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-6",
+        "label": "[What is happening today.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "text-7",
+        "label": "→",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-8",
+        "label": "AFTER",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 82
+      },
+      {
+        "key": "text-9",
+        "label": "[The better state]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-10",
+        "label": "[What changes for people.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 120
+      },
+      {
+        "key": "footer-11",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-12",
+        "label": "Footer · 11",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 15,
+    "id": "toolkit-process-three",
+    "name": "Three-step process",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 12",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "1",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-5",
+        "label": "[Step 1]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 28
+      },
+      {
+        "key": "text-6",
+        "label": "[Describe the action for this step.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 184
+      },
+      {
+        "key": "text-7",
+        "label": "→",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-8",
+        "label": "2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-9",
+        "label": "[Step 2]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 28
+      },
+      {
+        "key": "text-10",
+        "label": "[Describe the action for this step.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 184
+      },
+      {
+        "key": "text-11",
+        "label": "→",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-12",
+        "label": "3",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-13",
+        "label": "[Step 3]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 28
+      },
+      {
+        "key": "text-14",
+        "label": "[Describe the action for this step.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 184
+      },
+      {
+        "key": "footer-15",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-16",
+        "label": "Footer · 12",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 16,
+    "id": "toolkit-process-five",
+    "name": "Five-step process",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 13",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "1",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-5",
+        "label": "[Step 1]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 32
+      },
+      {
+        "key": "text-6",
+        "label": "[Short action or description]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 102
+      },
+      {
+        "key": "text-7",
+        "label": "2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-8",
+        "label": "[Step 2]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 32
+      },
+      {
+        "key": "text-9",
+        "label": "[Short action or description]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 102
+      },
+      {
+        "key": "text-10",
+        "label": "3",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-11",
+        "label": "[Step 3]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 32
+      },
+      {
+        "key": "text-12",
+        "label": "[Short action or description]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 102
+      },
+      {
+        "key": "text-13",
+        "label": "4",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-14",
+        "label": "[Step 4]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 32
+      },
+      {
+        "key": "text-15",
+        "label": "[Short action or description]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 102
+      },
+      {
+        "key": "text-16",
+        "label": "5",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 21
+      },
+      {
+        "key": "text-17",
+        "label": "[Step 5]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 32
+      },
+      {
+        "key": "text-18",
+        "label": "[Short action or description]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 102
+      },
+      {
+        "key": "footer-19",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-20",
+        "label": "Footer · 13",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 17,
+    "id": "toolkit-timeline",
+    "name": "Timeline",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 14",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "[DATE]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 30
+      },
+      {
+        "key": "text-5",
+        "label": "[Milestone 1]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-6",
+        "label": "[What will be true at this point.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 120
+      },
+      {
+        "key": "text-7",
+        "label": "[DATE]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 30
+      },
+      {
+        "key": "text-8",
+        "label": "[Milestone 2]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-9",
+        "label": "[What will be true at this point.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 120
+      },
+      {
+        "key": "text-10",
+        "label": "[DATE]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 30
+      },
+      {
+        "key": "text-11",
+        "label": "[Milestone 3]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-12",
+        "label": "[What will be true at this point.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 120
+      },
+      {
+        "key": "text-13",
+        "label": "[DATE]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 30
+      },
+      {
+        "key": "text-14",
+        "label": "[Milestone 4]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 44
+      },
+      {
+        "key": "text-15",
+        "label": "[What will be true at this point.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 120
+      },
+      {
+        "key": "footer-16",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-17",
+        "label": "Footer · 14",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 18,
+    "id": "toolkit-matrix",
+    "name": "2 × 2 matrix",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 15",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "[VERTICAL AXIS]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 204
+      },
+      {
+        "key": "text-5",
+        "label": "[HORIZONTAL AXIS]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 76
+      },
+      {
+        "key": "text-6",
+        "label": "[Quadrant 1]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 32
+      },
+      {
+        "key": "text-7",
+        "label": "[Meaning or action]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 108
+      },
+      {
+        "key": "text-8",
+        "label": "[Quadrant 2]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 32
+      },
+      {
+        "key": "text-9",
+        "label": "[Meaning or action]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 108
+      },
+      {
+        "key": "text-10",
+        "label": "[Quadrant 3]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 32
+      },
+      {
+        "key": "text-11",
+        "label": "[Meaning or action]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 108
+      },
+      {
+        "key": "text-12",
+        "label": "[Quadrant 4]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 32
+      },
+      {
+        "key": "text-13",
+        "label": "[Meaning or action]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 108
+      },
+      {
+        "key": "footer-14",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-15",
+        "label": "Footer · 15",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 19,
+    "id": "toolkit-framework",
+    "name": "Framework / cycle",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 16",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "[Shared outcome]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 36
+      },
+      {
+        "key": "text-5",
+        "label": "[Part one]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 30
+      },
+      {
+        "key": "text-6",
+        "label": "[Part two]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 30
+      },
+      {
+        "key": "text-7",
+        "label": "[Part three]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 32
+      },
+      {
+        "key": "footer-8",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-9",
+        "label": "Footer · 16",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 20,
+    "id": "toolkit-metric",
+    "name": "One big metric",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 17",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 24
+      },
+      {
+        "key": "text-4",
+        "label": "[What this number means]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 56
+      },
+      {
+        "key": "text-5",
+        "label": "[Time period · source · definition]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 340
+      },
+      {
+        "key": "footer-6",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-7",
+        "label": "Footer · 17",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 21,
+    "id": "toolkit-metrics",
+    "name": "Three metrics",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 18",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "headline-2",
+        "label": "Headline · 2",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 24
+      },
+      {
+        "key": "text-5",
+        "label": "[Metric 1]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 30
+      },
+      {
+        "key": "text-6",
+        "label": "[Time period or definition]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 116
+      },
+      {
+        "key": "headline-3",
+        "label": "Headline · 3",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 24
+      },
+      {
+        "key": "text-8",
+        "label": "[Metric 2]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 30
+      },
+      {
+        "key": "text-9",
+        "label": "[Time period or definition]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 116
+      },
+      {
+        "key": "headline-4",
+        "label": "Headline · 4",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 24
+      },
+      {
+        "key": "text-11",
+        "label": "[Metric 3]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 30
+      },
+      {
+        "key": "text-12",
+        "label": "[Time period or definition]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 116
+      },
+      {
+        "key": "footer-13",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-14",
+        "label": "Footer · 18",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 22,
+    "id": "toolkit-bar-chart",
+    "name": "Bar chart",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 19",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "chart-data",
+        "label": "Chart data",
+        "type": "chart",
+        "maxLabels": 12,
+        "maxSeries": 3
+      },
+      {
+        "key": "text-4",
+        "label": "EXAMPLE DATA · REPLACE BEFORE PRESENTING",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 186
+      },
+      {
+        "key": "footer-5",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-6",
+        "label": "Footer · 19",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 23,
+    "id": "toolkit-line-chart",
+    "name": "Line chart",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 20",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "chart-data",
+        "label": "Chart data",
+        "type": "chart",
+        "maxLabels": 12,
+        "maxSeries": 3
+      },
+      {
+        "key": "text-4",
+        "label": "EXAMPLE DATA · REPLACE BEFORE PRESENTING",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 186
+      },
+      {
+        "key": "footer-5",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-6",
+        "label": "Footer · 20",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 24,
+    "id": "toolkit-case-study",
+    "name": "Case study",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 21",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "[Person or organization]",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 86
+      },
+      {
+        "key": "text-5",
+        "label": "[Brief context for the story.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 292
+      },
+      {
+        "key": "text-6",
+        "label": "THE SITUATION",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 136
+      },
+      {
+        "key": "text-7",
+        "label": "[What was happening?]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 64
+      },
+      {
+        "key": "text-8",
+        "label": "THE ACTION",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 136
+      },
+      {
+        "key": "text-9",
+        "label": "[What did they change?]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 64
+      },
+      {
+        "key": "text-10",
+        "label": "THE RESULT",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 136
+      },
+      {
+        "key": "text-11",
+        "label": "[What happened next?]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 64
+      },
+      {
+        "key": "footer-12",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-13",
+        "label": "Footer · 21",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 25,
+    "id": "toolkit-exercise",
+    "name": "Exercise / prompt",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 22",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "text-3",
+        "label": "[5 MINUTES]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 34
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 126
+      },
+      {
+        "key": "text-5",
+        "label": "[Write it down, discuss with a partner, then share o",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 332
+      },
+      {
+        "key": "footer-6",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-7",
+        "label": "Footer · 22",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 26,
+    "id": "toolkit-faq",
+    "name": "FAQ / summary",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 23",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": false,
+        "maxLength": 50
+      },
+      {
+        "key": "text-4",
+        "label": "[Question 1]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 36
+      },
+      {
+        "key": "text-5",
+        "label": "[A direct answer in one or two short lines.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 234
+      },
+      {
+        "key": "text-6",
+        "label": "[Question 2]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 36
+      },
+      {
+        "key": "text-7",
+        "label": "[A direct answer in one or two short lines.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 234
+      },
+      {
+        "key": "text-8",
+        "label": "[Question 3]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 36
+      },
+      {
+        "key": "text-9",
+        "label": "[A direct answer in one or two short lines.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 234
+      },
+      {
+        "key": "footer-10",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-11",
+        "label": "Footer · 23",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 27,
+    "id": "toolkit-closing",
+    "name": "Closing / next action",
+    "role": "content",
+    "style": "editorial",
+    "backgroundMedia": "system-editorial-clean",
+    "editableFields": [
+      {
+        "key": "header-1",
+        "label": "Header · UNCOMMON LEADERS / AUSTIN",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 356
+      },
+      {
+        "key": "header-2",
+        "label": "Header · FIELD NOTES / 24",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 124
+      },
+      {
+        "key": "headline-1",
+        "label": "Headline",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 68
+      },
+      {
+        "key": "text-4",
+        "label": "[One clear action for the audience.]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 106
+      },
+      {
+        "key": "text-5",
+        "label": "[Link, contact, or next meeting details]",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 328
+      },
+      {
+        "key": "footer-6",
+        "label": "Footer · UNCOMMON LEADERS LIVE",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 320
+      },
+      {
+        "key": "footer-7",
+        "label": "Footer · 24",
+        "type": "text",
+        "multiline": true,
+        "maxLength": 80
+      }
+    ]
+  },
+  {
+    "slide": 28,
+    "id": "character-hat-tip-4k",
+    "name": "Character hat tip",
+    "role": "hold",
+    "style": "production",
+    "backgroundMedia": "character-hat-tip-4k",
+    "editableFields": []
+  },
+  {
+    "slide": 29,
+    "id": "leaders-stars-4k",
+    "name": "Logo + stars",
+    "role": "hold",
+    "style": "production",
+    "backgroundMedia": "leaders-stars-4k",
+    "editableFields": []
+  },
+  {
+    "slide": 30,
+    "id": "quiet-range-4k",
+    "name": "Quiet range",
+    "role": "hold",
+    "style": "production",
+    "backgroundMedia": "quiet-range-4k",
+    "editableFields": []
+  },
+  {
+    "slide": 31,
+    "id": "badge-4k",
+    "name": "Austin intermission",
+    "role": "hold",
+    "style": "production",
+    "backgroundMedia": "badge-4k",
+    "editableFields": []
+  },
+  {
+    "slide": 32,
+    "id": "pattern-4k",
+    "name": "Austin pattern",
+    "role": "hold",
+    "style": "production",
+    "backgroundMedia": "pattern-4k",
+    "editableFields": []
+  },
+  {
+    "slide": 33,
+    "id": "matched-components",
+    "name": "Reusable components",
+    "role": "source",
+    "style": "editorial",
+    "editableFields": []
+  },
+  {
+    "slide": 34,
+    "id": "matched-elements",
+    "name": "Full-resolution elements",
+    "role": "source",
+    "style": "editorial",
+    "editableFields": []
+  }
+]

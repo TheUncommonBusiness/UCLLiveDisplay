@@ -10,6 +10,22 @@ The default Main stage plays a 4K logo film. Supporting displays share an Austin
 
 [Production guide](https://theuncommonbusiness.github.io/UCLLiveDisplay/production-guide.html)
 
+## Control across computers
+
+Choose **Live session → Create live session**. The service shares the current show and uploaded media. Copy a display link to each stage laptop, then press F there. Copy the control link to another production computer to control that same session.
+
+Edits remain in Preview until Launch. Displays check for new cues about once per second, use a shared server clock, and keep their last launched program if the connection drops. A running countdown can still reach its end screen offline. Remote changes resume when the connection returns. Control links can publish changes, while display links can only receive them. End session revokes its links.
+
+Sessions expire after 30 days. Uploaded media supports 250 MiB per file, 50 files, and 1 GiB per session. Shared files transfer in chunks and cache locally on receiving laptops. The controller waits for an upload to finish before publishing the show.
+
+The isolated session service is [hosted here](https://ucl-live-sessions.the-uncommon-6173.chatgpt.site). It uses durable state, revision checks to prevent stale controllers overwriting a newer cue, and authenticated media access. Session credentials stay in link fragments. The backend source checkout is in remote-service and has its own deployment repository.
+
+## Matching presentation system
+
+Modern Editorial is the content style, Big Type handles big ideas, and Night Rodeo marks section breaks. The console includes 26 editable layouts from the same scene definitions used by the [34-slide PowerPoint kit](backups/ucl-matched-presentation-kit.pptx). Both use the same four restrained 15-second 4K background movies, with editable foreground text, shapes, and charts.
+
+[PowerPoint preview](backups/ucl-matched-presentation-kit-preview.pdf) · [Editing notes](presentation-system/readme.md)
+
 ## Included
 
 - Editable Austin templates, saved copies, uploaded images/video, and show export/import with media.
@@ -23,13 +39,13 @@ The default Main stage plays a 4K logo film. Supporting displays share an Austin
 
 Download the repository and run `python3 -m http.server 8787 --bind 127.0.0.1` from this folder. Open `http://127.0.0.1:8787/`. The app uses JavaScript modules, so opening index.html directly as a file will not work.
 
-All operator and output windows must use the same origin, browser profile, and computer. Export a show to move it to a different machine. Shared built-in templates are in the repository. Personal edits stay in browser storage until exported.
+Local mode connects windows in the same browser profile on one computer. Live session mode connects computers through the session service. Each session has its own browser storage and message channel. Leaving a session restores the previous local show. Export show remains available for a portable backup.
 
 ## Development
 
 No build step or runtime dependencies are required. `npm test` runs the timer, loop, and state tests. Browser tests are in `tests/browser.mjs` and need Playwright plus Chrome. Run the local server first.
 
-After editing published files, run `node tools/build-cache.mjs` to update the service worker cache manifest. Deploy the main branch through GitHub Pages. An updated worker waits until existing application windows close, so a deployment does not replace files in the middle of a show.
+After editing published files, run `node tools/build-cache.mjs` to update the service worker cache manifest. Deploy the main branch through GitHub Pages. A new worker activates after its complete cache is ready. Existing documents keep running. Refresh the console to load an updated interface, without reloading stage windows.
 
 Animation source lives in tools/*-film. The PowerPoint generator and backup files live in tools and backups. Videos are embedded in the decks. See backups/readme.md for font and playback notes.
 
@@ -37,4 +53,4 @@ Animation source lives in tools/*-film. The PowerPoint generator and backup file
 
 Browser security requires user interaction for full screen, and some browsers block multiple pop-ups until allowed. Monitor detection is available only in browsers that support the Window Management API. Manual placement works without it. An Open as browser tab fallback is available if a browser refuses full screen in a pop-up.
 
-The software has browser and media validation, but the venue’s display hardware and the production laptop still need a rehearsal. Playback timing is coordinated by the computer clock. It is not frame-locked broadcast video hardware.
+The software has browser and media validation, but the venue’s display hardware and the production laptop still need a rehearsal. Local playback uses the computer clock. Live sessions calibrate against the server clock. Remote updates require internet and are not frame-locked broadcast video.

@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "checks": [
+    "Still mode uses poster and pauses video",
+    "Edited long title shrinks within its native text box",
+    "Chart labels, negative values, and multiple series update",
+    "Reduced-motion changes pause and resume shared video",
+    "Media error preserves full background poster and native text",
+    "Dispose removes scene and releases media"
+  ],
+  "errors": []
+}

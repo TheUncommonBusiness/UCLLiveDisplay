@@ -1,3 +1,5 @@
+import {buildPresentationScene} from './presentation-renderer.js';
+import {now as currentTime} from './clock.js';
 import {effectiveProgram,loopPosition,remaining,formatTime} from './model.js';
 import {mediaInfo,mediaURL} from './media.js';
 
@@ -14,9 +16,10 @@ function grass(){
 function stars(parent,preset){
  const points=[{x:1760,y:105,size:43},{x:890,y:177,size:24},{x:1640,y:830,size:28},{x:121,y:110,size:20}];
  for(let i=0;i<52;i++){const x=75+(i*557)%1770,y=73+(i*233)%840;if(x>750&&y>325&&y<730)continue;if(x>125&&x<710&&y>180&&i%3!==0)continue;points.push({x,y,size:7+(i*7)%7})}
- points.forEach((s,i)=>{const n=document.createElementNS('http://www.w3.org/2000/svg','svg');n.classList.add('twinkle');n.setAttribute('viewBox','0 0 50 50');n.innerHTML='<path fill="currentColor" d="'+starPath+'"/>';pos(n,s.x,s.y,s.size,s.size);const period=[5,10,20][i%3];n.style.setProperty('--period',period+'s');n.style.animationDelay=(-((Date.now()/1000+i*.618*period)%period))+'s';parent.append(n)});
+ points.forEach((s,i)=>{const n=document.createElementNS('http://www.w3.org/2000/svg','svg');n.classList.add('twinkle');n.setAttribute('viewBox','0 0 50 50');n.innerHTML='<path fill="currentColor" d="'+starPath+'"/>';pos(n,s.x,s.y,s.size,s.size);const period=[5,10,20][i%3];n.style.setProperty('--period',period+'s');n.style.animationDelay=(-((currentTime()/1000+i*.618*period)%period))+'s';parent.append(n)});
 }
 export function buildScene(preset,state,{showTimer=false}={}){
+ if(preset.layout==='presentation')return buildPresentationScene(preset,state,{showTimer});
  if(!document.getElementById('austin-palette')){const defs=document.createElementNS('http://www.w3.org/2000/svg','svg');defs.style.cssText='position:absolute;width:0;height:0;pointer-events:none';defs.setAttribute('aria-hidden','true');defs.innerHTML='<defs><filter id="austin-palette" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".231 .777 .078 0 -.064 .220 .739 .075 0 -.010 .214 .718 .073 0 -.025 0 0 0 1 0"/></filter></defs>';document.body.append(defs)}
  const root=el('div','scene '+preset.theme+' motion-'+preset.motion+' layout-'+preset.layout);root.dataset.layout=preset.layout;const meta=new Map(),videos=[];let disposed=false,fitted=false;
  const fg=preset.theme==='light'?'#192520':'#FDFFF2',accent=preset.theme==='light'?'#192520':'#F0FE91';
@@ -75,7 +78,7 @@ export class StageRenderer{
  layer(key,preset,timer){if(!this.layers.has(key)){const scene=buildScene(preset,this.state,{showTimer:timer});this.layers.set(key,scene);this.stage.append(scene.root)}return this.layers.get(key)}
  tick(){
   this.frame=requestAnimationFrame(this.tick);if(!this.feed)return;
-  const now=Date.now(),p=effectiveProgram(this.feed,now),timer=Boolean(this.feed.timer&&!p.id.endsWith('-finished'));
+  const now=currentTime(),p=effectiveProgram(this.feed,now),timer=Boolean(this.feed.timer&&!p.id.endsWith('-finished'));
   this.stage.style.visibility=this.feed.blackout?'hidden':'visible';
   const at=p.kind==='loop'?loopPosition(p,now):null;if(p.kind==='loop'&&!at)return;
   const current=at?p.items[at.index].preset:p.preset,key=p.id+'-'+(at?.index??0),a=this.layer(key,current,timer);let b=null,bkey=null;

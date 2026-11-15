@@ -1,0 +1,34 @@
+[
+  {
+    "id": "editorial-clean",
+    "endpointsIdentical": true,
+    "changedPixelsAtPeak": 388,
+    "width": 3840,
+    "height": 2160,
+    "duration": 15
+  },
+  {
+    "id": "editorial-portrait",
+    "endpointsIdentical": true,
+    "changedPixelsAtPeak": 179008,
+    "width": 3840,
+    "height": 2160,
+    "duration": 15
+  },
+  {
+    "id": "big-type",
+    "endpointsIdentical": true,
+    "changedPixelsAtPeak": 91245,
+    "width": 3840,
+    "height": 2160,
+    "duration": 15
+  },
+  {
+    "id": "night-rodeo",
+    "endpointsIdentical": true,
+    "changedPixelsAtPeak": 1246725,
+    "width": 3840,
+    "height": 2160,
+    "duration": 15
+  }
+]

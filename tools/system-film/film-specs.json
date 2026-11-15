@@ -1,0 +1,109 @@
+[
+  {
+    "id": "editorial-clean",
+    "background": "#FDFFF2",
+    "art": null,
+    "sparkColor": "#64735C",
+    "sparks": [
+      [
+        1870,
+        174,
+        16,
+        3.4
+      ],
+      [
+        42,
+        934,
+        11,
+        10.7
+      ]
+    ]
+  },
+  {
+    "id": "editorial-portrait",
+    "background": "#FDFFF2",
+    "art": [
+      "cowgirl-forest.svg",
+      1326,
+      242,
+      455,
+      610,
+      1
+    ],
+    "sparkColor": "#64735C",
+    "sparks": [
+      [
+        1805,
+        272,
+        16,
+        4.2
+      ],
+      [
+        1293,
+        820,
+        10,
+        11.6
+      ]
+    ]
+  },
+  {
+    "id": "big-type",
+    "background": "#F0FE91",
+    "art": [
+      "cowgirl-forest.svg",
+      1482,
+      792,
+      490,
+      656,
+      1
+    ],
+    "sparkColor": "#192520",
+    "sparks": [
+      [
+        1806,
+        847,
+        17,
+        13.0
+      ],
+      [
+        1465,
+        1022,
+        10,
+        13.6
+      ]
+    ]
+  },
+  {
+    "id": "night-rodeo",
+    "background": "#192520",
+    "art": [
+      "cowgirl-cream.svg",
+      -220,
+      -230,
+      1120,
+      1498,
+      0.18
+    ],
+    "sparkColor": "#F0FE91",
+    "sparks": [
+      [
+        1838,
+        180,
+        20,
+        4.3
+      ],
+      [
+        1504,
+        948,
+        13,
+        10.4
+      ],
+      [
+        490,
+        825,
+        11,
+        12.6
+      ]
+    ]
+  }
+]
