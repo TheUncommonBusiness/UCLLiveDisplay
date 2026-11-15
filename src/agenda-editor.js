@@ -21,7 +21,7 @@ export function initializeAgendaEditor({getPreset,onChange,onNotice}){
   if(!valid())return;const p=getPreset();
   if(e.target.matches('[data-agenda-day]'))p.schedule.dayId=e.target.value;
   else if(e.target.matches('[data-agenda-current]'))dayOf(p).activeItemId=e.target.value;
-  else if(e.target.matches('[data-agenda-style]')){p.agendaStyle=e.target.value;p.theme=p.agendaStyle==='night'?'dark':'light'}else return;
+  else if(e.target.matches('[data-agenda-style]')){p.agendaStyle=e.target.value;p.theme=p.agendaStyle==='night'?'dark':'light';if(p.id.startsWith('daily-agenda-')){p.id='daily-agenda-'+p.agendaStyle;if(p.name.startsWith('Daily agenda · '))p.name='Daily agenda · '+(p.agendaStyle==='night'?'Night':'Editorial')}}else return;
   changed();
  });
  dialog.addEventListener('click',e=>{
