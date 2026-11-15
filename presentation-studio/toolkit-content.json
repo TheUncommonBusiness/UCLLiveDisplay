@@ -1,0 +1,3117 @@
+{
+  "version": 1,
+  "width": 1920,
+  "height": 1080,
+  "slides": [
+    {
+      "id": "toolkit-section",
+      "style": "toolkit",
+      "name": "Section divider",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#192520",
+      "elements": [
+        {
+          "type": "text",
+          "text": "SECTION DIVIDER",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-f0fe91.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#FDFFF2",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 110,
+          "y": 300,
+          "w": 350,
+          "h": 250,
+          "size": 190,
+          "font": "Season",
+          "color": "#F0FE91"
+        },
+        {
+          "type": "text",
+          "text": "[Section\nheadline]",
+          "x": 500,
+          "y": 290,
+          "w": 1230,
+          "h": 420,
+          "size": 166,
+          "font": "Season",
+          "color": "#FDFFF2"
+        },
+        {
+          "type": "text",
+          "text": "[One sentence that sets up this section.]",
+          "x": 510,
+          "y": 790,
+          "w": 1140,
+          "h": 100,
+          "size": 37,
+          "font": "Inter",
+          "color": "#FDFFF2"
+        }
+      ],
+      "notes": "Replace the section number, headline, and one-line promise. Keep this page brief."
+    },
+    {
+      "id": "toolkit-agenda",
+      "style": "toolkit",
+      "name": "Agenda",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "AGENDA",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[What we’ll cover]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 115,
+          "y": 385,
+          "w": 110,
+          "h": 80,
+          "size": 36,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Topic 1]",
+          "x": 290,
+          "y": 375,
+          "w": 620,
+          "h": 95,
+          "size": 58,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[A short description of this part.]",
+          "x": 960,
+          "y": 388,
+          "w": 790,
+          "h": 80,
+          "size": 33,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "line",
+          "x": 290,
+          "y": 479,
+          "w": 1480,
+          "h": 0,
+          "stroke": "#C7D1BE",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 115,
+          "y": 510,
+          "w": 110,
+          "h": 80,
+          "size": 36,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Topic 2]",
+          "x": 290,
+          "y": 500,
+          "w": 620,
+          "h": 95,
+          "size": 58,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[A short description of this part.]",
+          "x": 960,
+          "y": 513,
+          "w": 790,
+          "h": 80,
+          "size": 33,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "line",
+          "x": 290,
+          "y": 604,
+          "w": 1480,
+          "h": 0,
+          "stroke": "#C7D1BE",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 115,
+          "y": 635,
+          "w": 110,
+          "h": 80,
+          "size": 36,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Topic 3]",
+          "x": 290,
+          "y": 625,
+          "w": 620,
+          "h": 95,
+          "size": 58,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[A short description of this part.]",
+          "x": 960,
+          "y": 638,
+          "w": 790,
+          "h": 80,
+          "size": 33,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "line",
+          "x": 290,
+          "y": 729,
+          "w": 1480,
+          "h": 0,
+          "stroke": "#C7D1BE",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "04",
+          "x": 115,
+          "y": 760,
+          "w": 110,
+          "h": 80,
+          "size": 36,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Topic 4]",
+          "x": 290,
+          "y": 750,
+          "w": 620,
+          "h": 95,
+          "size": 58,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[A short description of this part.]",
+          "x": 960,
+          "y": 763,
+          "w": 790,
+          "h": 80,
+          "size": 33,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Replace the four topics and descriptions. Remove a row if your agenda is shorter."
+    },
+    {
+      "id": "toolkit-big-idea",
+      "style": "toolkit",
+      "name": "Big idea",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#192520",
+      "elements": [
+        {
+          "type": "text",
+          "text": "BIG IDEA",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-f0fe91.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#FDFFF2",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[The one idea\nyou want them\nto remember.]",
+          "x": 110,
+          "y": 265,
+          "w": 1630,
+          "h": 540,
+          "size": 147,
+          "font": "Season",
+          "color": "#FDFFF2"
+        },
+        {
+          "type": "text",
+          "text": "[One sentence that makes the idea concrete.]",
+          "x": 118,
+          "y": 855,
+          "w": 1510,
+          "h": 80,
+          "size": 34,
+          "font": "Inter",
+          "color": "#F0FE91"
+        }
+      ],
+      "notes": "Write one clear idea in the large type. Use the smaller line only when it adds context."
+    },
+    {
+      "id": "toolkit-quote",
+      "style": "toolkit",
+      "name": "Quote + attribution",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "QUOTE + ATTRIBUTION",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "“",
+          "x": 100,
+          "y": 230,
+          "w": 190,
+          "h": 230,
+          "size": 250,
+          "font": "Season",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[A meaningful quote\ngoes here. Keep the\nwords worth reading.]",
+          "x": 320,
+          "y": 285,
+          "w": 1370,
+          "h": 425,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520",
+          "italic": true
+        },
+        {
+          "type": "text",
+          "text": "[Name, role or source]",
+          "x": 330,
+          "y": 815,
+          "w": 1250,
+          "h": 65,
+          "size": 34,
+          "font": "Inter",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Context or date]",
+          "x": 330,
+          "y": 883,
+          "w": 1250,
+          "h": 50,
+          "size": 25,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Paste a real quote, name its source, and add the context or date in the attribution."
+    },
+    {
+      "id": "toolkit-two-columns",
+      "style": "toolkit",
+      "name": "Two-column text",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "TWO-COLUMN TEXT",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Headline for this message]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[First idea]",
+          "x": 110,
+          "y": 390,
+          "w": 740,
+          "h": 105,
+          "size": 71,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Point one, stated clearly.]\n\n[Point two, with enough context.]\n\n[Point three or the next action.]",
+          "x": 115,
+          "y": 535,
+          "w": 730,
+          "h": 380,
+          "size": 36,
+          "font": "Inter",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Second idea]",
+          "x": 1020,
+          "y": 390,
+          "w": 740,
+          "h": 105,
+          "size": 71,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Point one, stated clearly.]\n\n[Point two, with enough context.]\n\n[Point three or the next action.]",
+          "x": 1025,
+          "y": 535,
+          "w": 730,
+          "h": 380,
+          "size": 36,
+          "font": "Inter",
+          "color": "#192520"
+        },
+        {
+          "type": "line",
+          "x": 955,
+          "y": 400,
+          "w": 0,
+          "h": 500,
+          "stroke": "#B9C7AF",
+          "strokeWidth": 1.5
+        }
+      ],
+      "notes": "Replace both column headings and their supporting points. Keep each point to one or two lines."
+    },
+    {
+      "id": "toolkit-text-image",
+      "style": "toolkit",
+      "name": "Text + image",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "TEXT + IMAGE",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[A headline with a point]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Explain the image\nin one clear thought.]",
+          "x": 110,
+          "y": 403,
+          "w": 770,
+          "h": 230,
+          "size": 77,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Add the context your audience needs.\nKeep this to a short paragraph.]",
+          "x": 115,
+          "y": 700,
+          "w": 730,
+          "h": 180,
+          "size": 37,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "rect",
+          "x": 1010,
+          "y": 380,
+          "w": 800,
+          "h": 530,
+          "fill": "#E8EDE0",
+          "stroke": "#A6B59A",
+          "strokeWidth": 2
+        },
+        {
+          "type": "line",
+          "x": 1010,
+          "y": 380,
+          "w": 800,
+          "h": 530,
+          "stroke": "#C4CEBB",
+          "strokeWidth": 1
+        },
+        {
+          "type": "line",
+          "x": 1010,
+          "y": 910,
+          "w": 800,
+          "h": -530,
+          "stroke": "#C4CEBB",
+          "strokeWidth": 1
+        },
+        {
+          "type": "rect",
+          "x": 1215,
+          "y": 585,
+          "w": 390,
+          "h": 90,
+          "fill": "#FDFFF2",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "ADD YOUR IMAGE",
+          "x": 1230,
+          "y": 610,
+          "w": 360,
+          "h": 55,
+          "size": 27,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Caption or source]",
+          "x": 1015,
+          "y": 940,
+          "w": 790,
+          "h": 42,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Replace the image placeholder with your photo or screenshot. Edit the headline and supporting copy."
+    },
+    {
+      "id": "toolkit-pillars",
+      "style": "toolkit",
+      "name": "Three pillars",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "THREE PILLARS",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Three things that matter]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 110,
+          "y": 406,
+          "w": 130,
+          "h": 100,
+          "size": 65,
+          "font": "Season",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Pillar 1]",
+          "x": 110,
+          "y": 540,
+          "w": 480,
+          "h": 160,
+          "size": 72,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[One sentence that explains\nwhy this pillar matters.]",
+          "x": 114,
+          "y": 735,
+          "w": 470,
+          "h": 140,
+          "size": 33,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "line",
+          "x": 650,
+          "y": 416,
+          "w": 0,
+          "h": 450,
+          "stroke": "#BBC7B1",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 710,
+          "y": 406,
+          "w": 130,
+          "h": 100,
+          "size": 65,
+          "font": "Season",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Pillar 2]",
+          "x": 710,
+          "y": 540,
+          "w": 480,
+          "h": 160,
+          "size": 72,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[One sentence that explains\nwhy this pillar matters.]",
+          "x": 714,
+          "y": 735,
+          "w": 470,
+          "h": 140,
+          "size": 33,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "line",
+          "x": 1250,
+          "y": 416,
+          "w": 0,
+          "h": 450,
+          "stroke": "#BBC7B1",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 1310,
+          "y": 406,
+          "w": 130,
+          "h": 100,
+          "size": 65,
+          "font": "Season",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Pillar 3]",
+          "x": 1310,
+          "y": 540,
+          "w": 480,
+          "h": 160,
+          "size": 72,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[One sentence that explains\nwhy this pillar matters.]",
+          "x": 1314,
+          "y": 735,
+          "w": 470,
+          "h": 140,
+          "size": 33,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Name three pillars and give each one a single supporting sentence."
+    },
+    {
+      "id": "toolkit-comparison",
+      "style": "toolkit",
+      "name": "Two-way comparison",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "TWO-WAY COMPARISON",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Choose between two paths]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "rect",
+          "x": 110,
+          "y": 390,
+          "w": 820,
+          "h": 530,
+          "fill": "#E8EDE0",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[Option A]",
+          "x": 155,
+          "y": 435,
+          "w": 730,
+          "h": 110,
+          "size": 75,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Criterion one]\n\n[Criterion two]\n\n[Criterion three]",
+          "x": 160,
+          "y": 600,
+          "w": 710,
+          "h": 270,
+          "size": 36,
+          "font": "Inter",
+          "color": "#192520"
+        },
+        {
+          "type": "rect",
+          "x": 990,
+          "y": 390,
+          "w": 820,
+          "h": 530,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[Option B]",
+          "x": 1035,
+          "y": 435,
+          "w": 730,
+          "h": 110,
+          "size": 75,
+          "font": "Season",
+          "color": "#F0FE91"
+        },
+        {
+          "type": "text",
+          "text": "[Criterion one]\n\n[Criterion two]\n\n[Criterion three]",
+          "x": 1040,
+          "y": 600,
+          "w": 710,
+          "h": 270,
+          "size": 36,
+          "font": "Inter",
+          "color": "#FDFFF2"
+        }
+      ],
+      "notes": "Replace the option labels and compare the same three criteria on each side."
+    },
+    {
+      "id": "toolkit-before-after",
+      "style": "toolkit",
+      "name": "Before + after",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "BEFORE + AFTER",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Show the change]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "BEFORE",
+          "x": 110,
+          "y": 412,
+          "w": 650,
+          "h": 48,
+          "size": 26,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "text",
+          "text": "[The current\nstate]",
+          "x": 110,
+          "y": 505,
+          "w": 650,
+          "h": 235,
+          "size": 94,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[What is happening today.]",
+          "x": 115,
+          "y": 804,
+          "w": 630,
+          "h": 85,
+          "size": 34,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "→",
+          "x": 846,
+          "y": 580,
+          "w": 225,
+          "h": 170,
+          "size": 122,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "AFTER",
+          "x": 1180,
+          "y": 412,
+          "w": 630,
+          "h": 48,
+          "size": 26,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "text",
+          "text": "[The better\nstate]",
+          "x": 1180,
+          "y": 505,
+          "w": 630,
+          "h": 235,
+          "size": 94,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[What changes for people.]",
+          "x": 1185,
+          "y": 804,
+          "w": 620,
+          "h": 85,
+          "size": 34,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Describe the starting point and desired outcome. Put the change itself in the center."
+    },
+    {
+      "id": "toolkit-process-three",
+      "style": "toolkit",
+      "name": "Three-step process",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "THREE-STEP PROCESS",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[A process people can follow]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "ellipse",
+          "x": 110,
+          "y": 407,
+          "w": 100,
+          "h": 100,
+          "fill": "#F0FE91",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "1",
+          "x": 130,
+          "y": 422,
+          "w": 60,
+          "h": 70,
+          "size": 47,
+          "font": "Inter",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Step 1]",
+          "x": 110,
+          "y": 568,
+          "w": 480,
+          "h": 100,
+          "size": 70,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Describe the action\nfor this step.]",
+          "x": 114,
+          "y": 714,
+          "w": 475,
+          "h": 160,
+          "size": 35,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "→",
+          "x": 598,
+          "y": 427,
+          "w": 90,
+          "h": 90,
+          "size": 55,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "ellipse",
+          "x": 710,
+          "y": 407,
+          "w": 100,
+          "h": 100,
+          "fill": "#F0FE91",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "2",
+          "x": 730,
+          "y": 422,
+          "w": 60,
+          "h": 70,
+          "size": 47,
+          "font": "Inter",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Step 2]",
+          "x": 710,
+          "y": 568,
+          "w": 480,
+          "h": 100,
+          "size": 70,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Describe the action\nfor this step.]",
+          "x": 714,
+          "y": 714,
+          "w": 475,
+          "h": 160,
+          "size": 35,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "→",
+          "x": 1198,
+          "y": 427,
+          "w": 90,
+          "h": 90,
+          "size": 55,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "ellipse",
+          "x": 1310,
+          "y": 407,
+          "w": 100,
+          "h": 100,
+          "fill": "#F0FE91",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "3",
+          "x": 1330,
+          "y": 422,
+          "w": 60,
+          "h": 70,
+          "size": 47,
+          "font": "Inter",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Step 3]",
+          "x": 1310,
+          "y": 568,
+          "w": 480,
+          "h": 100,
+          "size": 70,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Describe the action\nfor this step.]",
+          "x": 1314,
+          "y": 714,
+          "w": 475,
+          "h": 160,
+          "size": 35,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Use verbs for each step and explain the action in one short sentence."
+    },
+    {
+      "id": "toolkit-process-five",
+      "style": "toolkit",
+      "name": "Five-step process",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "FIVE-STEP PROCESS",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Five moves, one outcome]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "line",
+          "x": 255,
+          "y": 484,
+          "w": 1390,
+          "h": 0,
+          "stroke": "#A5B699",
+          "strokeWidth": 3
+        },
+        {
+          "type": "ellipse",
+          "x": 175,
+          "y": 414,
+          "w": 140,
+          "h": 140,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "1",
+          "x": 212,
+          "y": 442,
+          "w": 65,
+          "h": 82,
+          "size": 55,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Step 1]",
+          "x": 110,
+          "y": 620,
+          "w": 290,
+          "h": 150,
+          "size": 61,
+          "font": "Season",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Short action\nor description]",
+          "x": 110,
+          "y": 812,
+          "w": 290,
+          "h": 100,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "ellipse",
+          "x": 525,
+          "y": 414,
+          "w": 140,
+          "h": 140,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "2",
+          "x": 562,
+          "y": 442,
+          "w": 65,
+          "h": 82,
+          "size": 55,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Step 2]",
+          "x": 460,
+          "y": 620,
+          "w": 290,
+          "h": 150,
+          "size": 61,
+          "font": "Season",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Short action\nor description]",
+          "x": 460,
+          "y": 812,
+          "w": 290,
+          "h": 100,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "ellipse",
+          "x": 875,
+          "y": 414,
+          "w": 140,
+          "h": 140,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "3",
+          "x": 912,
+          "y": 442,
+          "w": 65,
+          "h": 82,
+          "size": 55,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Step 3]",
+          "x": 810,
+          "y": 620,
+          "w": 290,
+          "h": 150,
+          "size": 61,
+          "font": "Season",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Short action\nor description]",
+          "x": 810,
+          "y": 812,
+          "w": 290,
+          "h": 100,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "ellipse",
+          "x": 1225,
+          "y": 414,
+          "w": 140,
+          "h": 140,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "4",
+          "x": 1262,
+          "y": 442,
+          "w": 65,
+          "h": 82,
+          "size": 55,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Step 4]",
+          "x": 1160,
+          "y": 620,
+          "w": 290,
+          "h": 150,
+          "size": 61,
+          "font": "Season",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Short action\nor description]",
+          "x": 1160,
+          "y": 812,
+          "w": 290,
+          "h": 100,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "ellipse",
+          "x": 1575,
+          "y": 414,
+          "w": 140,
+          "h": 140,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "5",
+          "x": 1612,
+          "y": 442,
+          "w": 65,
+          "h": 82,
+          "size": 55,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Step 5]",
+          "x": 1510,
+          "y": 620,
+          "w": 290,
+          "h": 150,
+          "size": 61,
+          "font": "Season",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Short action\nor description]",
+          "x": 1510,
+          "y": 812,
+          "w": 290,
+          "h": 100,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        }
+      ],
+      "notes": "Replace each numbered step with a short verb phrase. Keep detail on the following slides."
+    },
+    {
+      "id": "toolkit-timeline",
+      "style": "toolkit",
+      "name": "Timeline",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "TIMELINE",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[The plan over time]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "line",
+          "x": 140,
+          "y": 560,
+          "w": 1320,
+          "h": 0,
+          "stroke": "#192520",
+          "strokeWidth": 3
+        },
+        {
+          "type": "ellipse",
+          "x": 127,
+          "y": 547,
+          "w": 26,
+          "h": 26,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[DATE]",
+          "x": 110,
+          "y": 420,
+          "w": 280,
+          "h": 60,
+          "size": 30,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Milestone 1]",
+          "x": 110,
+          "y": 650,
+          "w": 360,
+          "h": 120,
+          "size": 54,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[What will be true\nat this point.]",
+          "x": 114,
+          "y": 805,
+          "w": 350,
+          "h": 110,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "ellipse",
+          "x": 567,
+          "y": 547,
+          "w": 26,
+          "h": 26,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[DATE]",
+          "x": 550,
+          "y": 420,
+          "w": 280,
+          "h": 60,
+          "size": 30,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Milestone 2]",
+          "x": 550,
+          "y": 650,
+          "w": 360,
+          "h": 120,
+          "size": 54,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[What will be true\nat this point.]",
+          "x": 554,
+          "y": 805,
+          "w": 350,
+          "h": 110,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "ellipse",
+          "x": 1007,
+          "y": 547,
+          "w": 26,
+          "h": 26,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[DATE]",
+          "x": 990,
+          "y": 420,
+          "w": 280,
+          "h": 60,
+          "size": 30,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Milestone 3]",
+          "x": 990,
+          "y": 650,
+          "w": 360,
+          "h": 120,
+          "size": 54,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[What will be true\nat this point.]",
+          "x": 994,
+          "y": 805,
+          "w": 350,
+          "h": 110,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "ellipse",
+          "x": 1447,
+          "y": 547,
+          "w": 26,
+          "h": 26,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[DATE]",
+          "x": 1430,
+          "y": 420,
+          "w": 280,
+          "h": 60,
+          "size": 30,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Milestone 4]",
+          "x": 1430,
+          "y": 650,
+          "w": 360,
+          "h": 120,
+          "size": 54,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[What will be true\nat this point.]",
+          "x": 1434,
+          "y": 805,
+          "w": 350,
+          "h": 110,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Replace dates, milestone names, and outcomes. Move the native markers to match your schedule."
+    },
+    {
+      "id": "toolkit-matrix",
+      "style": "toolkit",
+      "name": "2 × 2 matrix",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "2 × 2 MATRIX",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Map the choices]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "rect",
+          "x": 440,
+          "y": 365,
+          "w": 1190,
+          "h": 540,
+          "fill": "#E8EDE0",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "line",
+          "x": 1035,
+          "y": 365,
+          "w": 0,
+          "h": 540,
+          "stroke": "#8CA07C",
+          "strokeWidth": 2
+        },
+        {
+          "type": "line",
+          "x": 440,
+          "y": 635,
+          "w": 1190,
+          "h": 0,
+          "stroke": "#8CA07C",
+          "strokeWidth": 2
+        },
+        {
+          "type": "text",
+          "text": "[VERTICAL AXIS]",
+          "x": 65,
+          "y": 500,
+          "w": 300,
+          "h": 200,
+          "size": 29,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[HORIZONTAL AXIS]",
+          "x": 770,
+          "y": 937,
+          "w": 560,
+          "h": 45,
+          "size": 25,
+          "font": "Inter",
+          "color": "#64735C",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[Quadrant 1]",
+          "x": 480,
+          "y": 405,
+          "w": 500,
+          "h": 85,
+          "size": 52,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Meaning or action]",
+          "x": 485,
+          "y": 521,
+          "w": 480,
+          "h": 80,
+          "size": 30,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Quadrant 2]",
+          "x": 1080,
+          "y": 405,
+          "w": 500,
+          "h": 85,
+          "size": 52,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Meaning or action]",
+          "x": 1085,
+          "y": 521,
+          "w": 480,
+          "h": 80,
+          "size": 30,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Quadrant 3]",
+          "x": 480,
+          "y": 685,
+          "w": 500,
+          "h": 85,
+          "size": 52,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Meaning or action]",
+          "x": 485,
+          "y": 801,
+          "w": 480,
+          "h": 80,
+          "size": 30,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[Quadrant 4]",
+          "x": 1080,
+          "y": 685,
+          "w": 500,
+          "h": 85,
+          "size": 52,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Meaning or action]",
+          "x": 1085,
+          "y": 801,
+          "w": 480,
+          "h": 80,
+          "size": 30,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Replace axis labels and the four quadrants. Move the markers to map real options."
+    },
+    {
+      "id": "toolkit-framework",
+      "style": "toolkit",
+      "name": "Framework / cycle",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "FRAMEWORK / CYCLE",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Show how the parts connect]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "ellipse",
+          "x": 768,
+          "y": 535,
+          "w": 385,
+          "h": 180,
+          "fill": "#192520",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[Shared\noutcome]",
+          "x": 813,
+          "y": 552,
+          "w": 295,
+          "h": 145,
+          "size": 52,
+          "font": "Season",
+          "color": "#F0FE91",
+          "align": "center"
+        },
+        {
+          "type": "rect",
+          "x": 680,
+          "y": 345,
+          "w": 560,
+          "h": 175,
+          "fill": "#E8EDE0",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[Part one]",
+          "x": 710,
+          "y": 388,
+          "w": 500,
+          "h": 100,
+          "size": 65,
+          "font": "Season",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "rect",
+          "x": 1110,
+          "y": 725,
+          "w": 560,
+          "h": 175,
+          "fill": "#E8EDE0",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[Part two]",
+          "x": 1140,
+          "y": 768,
+          "w": 500,
+          "h": 100,
+          "size": 65,
+          "font": "Season",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "rect",
+          "x": 250,
+          "y": 725,
+          "w": 560,
+          "h": 175,
+          "fill": "#E8EDE0",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[Part three]",
+          "x": 280,
+          "y": 768,
+          "w": 500,
+          "h": 100,
+          "size": 65,
+          "font": "Season",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "line",
+          "x": 1240,
+          "y": 510,
+          "w": 150,
+          "h": 175,
+          "stroke": "#64735C",
+          "strokeWidth": 3,
+          "endArrowType": "triangle"
+        },
+        {
+          "type": "line",
+          "x": 1090,
+          "y": 827,
+          "w": -250,
+          "h": 0,
+          "stroke": "#64735C",
+          "strokeWidth": 3,
+          "endArrowType": "triangle"
+        },
+        {
+          "type": "line",
+          "x": 533,
+          "y": 700,
+          "w": 180,
+          "h": -165,
+          "stroke": "#64735C",
+          "strokeWidth": 3,
+          "endArrowType": "triangle"
+        }
+      ],
+      "notes": "Rename the three parts and central outcome. All circles, connectors, and labels are editable shapes."
+    },
+    {
+      "id": "toolkit-metric",
+      "style": "toolkit",
+      "name": "One big metric",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#192520",
+      "elements": [
+        {
+          "type": "text",
+          "text": "ONE BIG METRIC",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-f0fe91.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#FDFFF2",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[00]",
+          "x": 110,
+          "y": 245,
+          "w": 1450,
+          "h": 380,
+          "size": 270,
+          "font": "Season",
+          "color": "#F0FE91"
+        },
+        {
+          "type": "text",
+          "text": "[What this number means]",
+          "x": 118,
+          "y": 690,
+          "w": 1540,
+          "h": 135,
+          "size": 91,
+          "font": "Season",
+          "color": "#FDFFF2"
+        },
+        {
+          "type": "text",
+          "text": "[Time period · source · definition]",
+          "x": 121,
+          "y": 880,
+          "w": 1500,
+          "h": 70,
+          "size": 30,
+          "font": "Inter",
+          "color": "#FDFFF2"
+        }
+      ],
+      "notes": "Replace the metric, unit, and source. Remove this slide until you have a real value to share."
+    },
+    {
+      "id": "toolkit-metrics",
+      "style": "toolkit",
+      "name": "Three metrics",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "THREE METRICS",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[The measures that matter]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[00]",
+          "x": 110,
+          "y": 390,
+          "w": 490,
+          "h": 230,
+          "size": 153,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Metric 1]",
+          "x": 114,
+          "y": 680,
+          "w": 480,
+          "h": 110,
+          "size": 55,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Time period or definition]",
+          "x": 115,
+          "y": 836,
+          "w": 475,
+          "h": 70,
+          "size": 27,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[00]",
+          "x": 710,
+          "y": 390,
+          "w": 490,
+          "h": 230,
+          "size": 153,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Metric 2]",
+          "x": 714,
+          "y": 680,
+          "w": 480,
+          "h": 110,
+          "size": 55,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Time period or definition]",
+          "x": 715,
+          "y": 836,
+          "w": 475,
+          "h": 70,
+          "size": 27,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "[00]",
+          "x": 1310,
+          "y": 390,
+          "w": 490,
+          "h": 230,
+          "size": 153,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Metric 3]",
+          "x": 1314,
+          "y": 680,
+          "w": 480,
+          "h": 110,
+          "size": 55,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Time period or definition]",
+          "x": 1315,
+          "y": 836,
+          "w": 475,
+          "h": 70,
+          "size": 27,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Replace each value, label, and source with your own metrics."
+    },
+    {
+      "id": "toolkit-bar-chart",
+      "style": "toolkit",
+      "name": "Bar chart",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "BAR CHART",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Compare the values]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "chart",
+          "chartType": "bar",
+          "x": 110,
+          "y": 378,
+          "w": 1690,
+          "h": 510,
+          "data": [
+            {
+              "name": "Example values",
+              "labels": [
+                "Option A",
+                "Option B",
+                "Option C"
+              ],
+              "values": [
+                35,
+                65,
+                85
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "EXAMPLE DATA · REPLACE BEFORE PRESENTING",
+          "x": 115,
+          "y": 928,
+          "w": 1260,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Right-click the chart and choose Edit Data. Replace the example labels and values, then update the source line."
+    },
+    {
+      "id": "toolkit-line-chart",
+      "style": "toolkit",
+      "name": "Line chart",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "LINE CHART",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Show the trend]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "chart",
+          "chartType": "line",
+          "x": 110,
+          "y": 378,
+          "w": 1690,
+          "h": 510,
+          "data": [
+            {
+              "name": "Example trend",
+              "labels": [
+                "Period 1",
+                "Period 2",
+                "Period 3",
+                "Period 4"
+              ],
+              "values": [
+                20,
+                35,
+                28,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "EXAMPLE DATA · REPLACE BEFORE PRESENTING",
+          "x": 115,
+          "y": 928,
+          "w": 1260,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Right-click the chart and choose Edit Data. Replace the example dates and values with your own data."
+    },
+    {
+      "id": "toolkit-case-study",
+      "style": "toolkit",
+      "name": "Case study",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "CASE STUDY",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[A specific example]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Person or organization]",
+          "x": 110,
+          "y": 385,
+          "w": 1650,
+          "h": 95,
+          "size": 65,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Brief context for the story.]",
+          "x": 115,
+          "y": 510,
+          "w": 1560,
+          "h": 90,
+          "size": 36,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "text",
+          "text": "THE SITUATION",
+          "x": 110,
+          "y": 690,
+          "w": 480,
+          "h": 55,
+          "size": 24,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[What was happening?]",
+          "x": 110,
+          "y": 792,
+          "w": 475,
+          "h": 150,
+          "size": 49,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "THE ACTION",
+          "x": 710,
+          "y": 690,
+          "w": 480,
+          "h": 55,
+          "size": 24,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[What did they change?]",
+          "x": 710,
+          "y": 792,
+          "w": 475,
+          "h": 150,
+          "size": 49,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "THE RESULT",
+          "x": 1310,
+          "y": 690,
+          "w": 480,
+          "h": 55,
+          "size": 24,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[What happened next?]",
+          "x": 1310,
+          "y": 792,
+          "w": 475,
+          "h": 150,
+          "size": 49,
+          "font": "Season",
+          "color": "#192520"
+        }
+      ],
+      "notes": "Use a real story and verifiable outcome. Replace each placeholder with evidence from that case."
+    },
+    {
+      "id": "toolkit-exercise",
+      "style": "toolkit",
+      "name": "Exercise / prompt",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#192520",
+      "elements": [
+        {
+          "type": "text",
+          "text": "EXERCISE / PROMPT",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-f0fe91.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#FDFFF2",
+          "letterSpacing": 2
+        },
+        {
+          "type": "rect",
+          "x": 110,
+          "y": 260,
+          "w": 300,
+          "h": 70,
+          "fill": "#F0FE91",
+          "stroke": null,
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[5 MINUTES]",
+          "x": 130,
+          "y": 280,
+          "w": 260,
+          "h": 45,
+          "size": 25,
+          "font": "Inter",
+          "color": "#192520",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "[What do you\nwant people\nto work on?]",
+          "x": 110,
+          "y": 380,
+          "w": 1610,
+          "h": 430,
+          "size": 126,
+          "font": "Season",
+          "color": "#FDFFF2"
+        },
+        {
+          "type": "text",
+          "text": "[Write it down, discuss with a partner, then share one takeaway.]",
+          "x": 118,
+          "y": 902,
+          "w": 1570,
+          "h": 78,
+          "size": 32,
+          "font": "Inter",
+          "color": "#F0FE91"
+        }
+      ],
+      "notes": "Replace the prompt, time box, and share-back instruction. Keep the task visible while people work."
+    },
+    {
+      "id": "toolkit-faq",
+      "style": "toolkit",
+      "name": "FAQ / summary",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#FDFFF2",
+      "elements": [
+        {
+          "type": "text",
+          "text": "FAQ / SUMMARY",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-192520.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#64735C",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[Make the next step clear]",
+          "x": 110,
+          "y": 178,
+          "w": 1670,
+          "h": 172,
+          "size": 112,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[Question 1]",
+          "x": 110,
+          "y": 388,
+          "w": 700,
+          "h": 110,
+          "size": 63,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[A direct answer in one or two short lines.]",
+          "x": 940,
+          "y": 395,
+          "w": 850,
+          "h": 120,
+          "size": 37,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "line",
+          "x": 110,
+          "y": 529,
+          "w": 1690,
+          "h": 0,
+          "stroke": "#C3CEB9",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[Question 2]",
+          "x": 110,
+          "y": 564,
+          "w": 700,
+          "h": 110,
+          "size": 63,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[A direct answer in one or two short lines.]",
+          "x": 940,
+          "y": 571,
+          "w": 850,
+          "h": 120,
+          "size": 37,
+          "font": "Inter",
+          "color": "#64735C"
+        },
+        {
+          "type": "line",
+          "x": 110,
+          "y": 705,
+          "w": 1690,
+          "h": 0,
+          "stroke": "#C3CEB9",
+          "strokeWidth": 1
+        },
+        {
+          "type": "text",
+          "text": "[Question 3]",
+          "x": 110,
+          "y": 740,
+          "w": 700,
+          "h": 110,
+          "size": 63,
+          "font": "Season",
+          "color": "#192520"
+        },
+        {
+          "type": "text",
+          "text": "[A direct answer in one or two short lines.]",
+          "x": 940,
+          "y": 747,
+          "w": 850,
+          "h": 120,
+          "size": 37,
+          "font": "Inter",
+          "color": "#64735C"
+        }
+      ],
+      "notes": "Replace each question with a real audience question and answer it in one sentence."
+    },
+    {
+      "id": "toolkit-closing",
+      "style": "toolkit",
+      "name": "Closing / next action",
+      "role": "content",
+      "width": 1920,
+      "height": 1080,
+      "background": "#192520",
+      "elements": [
+        {
+          "type": "text",
+          "text": "CLOSING / NEXT ACTION",
+          "x": 110,
+          "y": 76,
+          "w": 1250,
+          "h": 44,
+          "size": 23,
+          "font": "Inter",
+          "color": "#F0FE91",
+          "letterSpacing": 3
+        },
+        {
+          "type": "image",
+          "path": "backups/elements/leaders-logo-f0fe91.svg",
+          "x": 1510,
+          "y": 66,
+          "w": 300,
+          "h": 96,
+          "fit": "contain"
+        },
+        {
+          "type": "text",
+          "text": "UNCOMMON LEADERS LIVE",
+          "x": 110,
+          "y": 1008,
+          "w": 900,
+          "h": 36,
+          "size": 18,
+          "font": "Inter",
+          "color": "#FDFFF2",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "text": "[What happens\nnext?]",
+          "x": 110,
+          "y": 270,
+          "w": 1640,
+          "h": 370,
+          "size": 164,
+          "font": "Season",
+          "color": "#FDFFF2"
+        },
+        {
+          "type": "text",
+          "text": "[One clear action for the audience.]",
+          "x": 117,
+          "y": 722,
+          "w": 1570,
+          "h": 95,
+          "size": 50,
+          "font": "Inter",
+          "color": "#F0FE91"
+        },
+        {
+          "type": "text",
+          "text": "[Link, contact, or next meeting details]",
+          "x": 120,
+          "y": 884,
+          "w": 1500,
+          "h": 80,
+          "size": 31,
+          "font": "Inter",
+          "color": "#FDFFF2"
+        }
+      ],
+      "notes": "Name one next action. Replace the link or contact details and the closing line."
+    }
+  ]
+}

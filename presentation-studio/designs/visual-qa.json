@@ -1,0 +1,66 @@
+{
+  "createdAt": "2026-11-15T14:24:54.171Z",
+  "resolution": [
+    3840,
+    2160
+  ],
+  "errors": [],
+  "slides": [
+    {
+      "id": "big-type-opening",
+      "findings": []
+    },
+    {
+      "id": "big-type-content",
+      "findings": []
+    },
+    {
+      "id": "editorial-opening",
+      "findings": []
+    },
+    {
+      "id": "editorial-content",
+      "findings": []
+    },
+    {
+      "id": "gallery-opening",
+      "findings": []
+    },
+    {
+      "id": "gallery-content",
+      "findings": []
+    },
+    {
+      "id": "night-rodeo-opening",
+      "findings": []
+    },
+    {
+      "id": "night-rodeo-content",
+      "findings": []
+    },
+    {
+      "id": "field-guide-opening",
+      "findings": []
+    },
+    {
+      "id": "field-guide-content",
+      "findings": []
+    },
+    {
+      "id": "poster-wall-opening",
+      "findings": []
+    },
+    {
+      "id": "poster-wall-content",
+      "findings": []
+    },
+    {
+      "id": "panorama-opening",
+      "findings": []
+    },
+    {
+      "id": "panorama-content",
+      "findings": []
+    }
+  ]
+}

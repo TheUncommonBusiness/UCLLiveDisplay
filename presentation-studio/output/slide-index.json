@@ -1,0 +1,310 @@
+[
+  {
+    "slide": 1,
+    "id": "how-to",
+    "name": "Start here",
+    "role": "guide",
+    "style": "toolkit"
+  },
+  {
+    "slide": 2,
+    "id": "big-type-opening",
+    "name": "Big Type / Opening",
+    "role": "opening",
+    "style": "big-type"
+  },
+  {
+    "slide": 3,
+    "id": "big-type-content",
+    "name": "Big Type / Content",
+    "role": "content",
+    "style": "big-type"
+  },
+  {
+    "slide": 4,
+    "id": "editorial-opening",
+    "name": "Modern Editorial / Opening",
+    "role": "opening",
+    "style": "editorial"
+  },
+  {
+    "slide": 5,
+    "id": "editorial-content",
+    "name": "Modern Editorial / Content",
+    "role": "content",
+    "style": "editorial"
+  },
+  {
+    "slide": 6,
+    "id": "gallery-opening",
+    "name": "Open Range Gallery / Opening",
+    "role": "opening",
+    "style": "gallery"
+  },
+  {
+    "slide": 7,
+    "id": "gallery-content",
+    "name": "Open Range Gallery / Content",
+    "role": "content",
+    "style": "gallery"
+  },
+  {
+    "slide": 8,
+    "id": "night-rodeo-opening",
+    "name": "Night Rodeo / Opening",
+    "role": "opening",
+    "style": "night-rodeo"
+  },
+  {
+    "slide": 9,
+    "id": "night-rodeo-content",
+    "name": "Night Rodeo / Content",
+    "role": "content",
+    "style": "night-rodeo"
+  },
+  {
+    "slide": 10,
+    "id": "field-guide-opening",
+    "name": "The Field Guide / Opening",
+    "role": "opening",
+    "style": "field-guide"
+  },
+  {
+    "slide": 11,
+    "id": "field-guide-content",
+    "name": "The Field Guide / Content",
+    "role": "content",
+    "style": "field-guide"
+  },
+  {
+    "slide": 12,
+    "id": "poster-wall-opening",
+    "name": "Poster Wall / Opening",
+    "role": "opening",
+    "style": "poster-wall"
+  },
+  {
+    "slide": 13,
+    "id": "poster-wall-content",
+    "name": "Poster Wall / Content",
+    "role": "content",
+    "style": "poster-wall"
+  },
+  {
+    "slide": 14,
+    "id": "panorama-opening",
+    "name": "Across the Horizon / Opening",
+    "role": "opening",
+    "style": "panorama"
+  },
+  {
+    "slide": 15,
+    "id": "panorama-content",
+    "name": "Across the Horizon / Content",
+    "role": "content",
+    "style": "panorama"
+  },
+  {
+    "slide": 16,
+    "id": "toolkit-section",
+    "name": "Section divider",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 17,
+    "id": "toolkit-agenda",
+    "name": "Agenda",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 18,
+    "id": "toolkit-big-idea",
+    "name": "Big idea",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 19,
+    "id": "toolkit-quote",
+    "name": "Quote + attribution",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 20,
+    "id": "toolkit-two-columns",
+    "name": "Two-column text",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 21,
+    "id": "toolkit-text-image",
+    "name": "Text + image",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 22,
+    "id": "toolkit-pillars",
+    "name": "Three pillars",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 23,
+    "id": "toolkit-comparison",
+    "name": "Two-way comparison",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 24,
+    "id": "toolkit-before-after",
+    "name": "Before + after",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 25,
+    "id": "toolkit-process-three",
+    "name": "Three-step process",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 26,
+    "id": "toolkit-process-five",
+    "name": "Five-step process",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 27,
+    "id": "toolkit-timeline",
+    "name": "Timeline",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 28,
+    "id": "toolkit-matrix",
+    "name": "2 × 2 matrix",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 29,
+    "id": "toolkit-framework",
+    "name": "Framework / cycle",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 30,
+    "id": "toolkit-metric",
+    "name": "One big metric",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 31,
+    "id": "toolkit-metrics",
+    "name": "Three metrics",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 32,
+    "id": "toolkit-bar-chart",
+    "name": "Bar chart",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 33,
+    "id": "toolkit-line-chart",
+    "name": "Line chart",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 34,
+    "id": "toolkit-case-study",
+    "name": "Case study",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 35,
+    "id": "toolkit-exercise",
+    "name": "Exercise / prompt",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 36,
+    "id": "toolkit-faq",
+    "name": "FAQ / summary",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 37,
+    "id": "toolkit-closing",
+    "name": "Closing / next action",
+    "role": "content",
+    "style": "toolkit"
+  },
+  {
+    "slide": 38,
+    "id": "character-hat-tip-4k",
+    "name": "Character hat tip",
+    "role": "hold",
+    "style": "production"
+  },
+  {
+    "slide": 39,
+    "id": "leaders-stars-4k",
+    "name": "Logo + stars",
+    "role": "hold",
+    "style": "production"
+  },
+  {
+    "slide": 40,
+    "id": "quiet-range-4k",
+    "name": "Quiet range",
+    "role": "hold",
+    "style": "production"
+  },
+  {
+    "slide": 41,
+    "id": "badge-4k",
+    "name": "Austin intermission",
+    "role": "hold",
+    "style": "production"
+  },
+  {
+    "slide": 42,
+    "id": "pattern-4k",
+    "name": "Austin pattern",
+    "role": "hold",
+    "style": "production"
+  },
+  {
+    "slide": 43,
+    "id": "components",
+    "name": "Reusable components",
+    "role": "source",
+    "style": "toolkit"
+  },
+  {
+    "slide": 44,
+    "id": "elements",
+    "name": "Full-resolution elements",
+    "role": "source",
+    "style": "toolkit"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "styles": 7,
+  "slides": 14,
+  "pairLinks": 7,
+  "navigation": true,
+  "directFilePreview": true,
+  "fonts": [
+    {
+      "family": "Season",
+      "status": "loaded"
+    },
+    {
+      "family": "Season",
+      "status": "loaded"
+    },
+    {
+      "family": "Inter",
+      "status": "loaded"
+    }
+  ],
+  "errors": []
+}
