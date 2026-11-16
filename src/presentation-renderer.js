@@ -26,7 +26,7 @@ function chart(e,value){
  return svg;
 }
 
-/** Native text and geometry over the exact same background film used in PowerPoint. */
+/** Editable text and geometry; moving backgrounds are reserved for title and section screens. */
 export function buildPresentationScene(preset,state,{showTimer=false}={}){
  const scene=getPresentationScene(preset.sceneId),root=node('div','scene presentation-scene motion-'+(preset.motion||'normal')),meta=new Map(),videos=[];
  Object.assign(root.style,{position:'absolute',inset:0,width:'1920px',height:'1080px',overflow:'hidden',isolation:'isolate',background:scene?.background||'#192520'});root.dataset.layout='presentation';root.dataset.sceneId=preset.sceneId||'';
@@ -35,7 +35,7 @@ export function buildPresentationScene(preset,state,{showTimer=false}={}){
  const fields={...scene.defaultFields,...preset.fields};
  if(media){
   const poster=node('img','presentation-poster');poster.alt='';poster.src=assetURL(media.poster);Object.assign(poster.style,{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'fill',zIndex:0});root.append(poster);
-  if(scene.role==='opening'||['toolkit-section','toolkit-big-idea'].includes(scene.id)){
+  if(scene.role==='opening'||scene.id==='toolkit-section'){
   video=node('video','presentation-film');video.muted=true;video.loop=true;video.playsInline=true;video.preload='auto';video.poster=assetURL(media.poster);video.src=assetURL(media.video);Object.assign(video.style,{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'fill',zIndex:0});
   video.addEventListener('error',()=>{video.style.display='none';video.dataset.still='true';root.dataset.mediaError='true';root.dispatchEvent(new CustomEvent('presentation-media-error',{bubbles:true,detail:{sceneId:scene.id,video:media.video}}))});root.append(video);videos.push(video);
   }

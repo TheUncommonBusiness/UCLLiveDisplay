@@ -9,7 +9,7 @@ The production folder also includes all fourteen 4K MP4s, small GIF previews, tr
 
 ## Edit and play
 
-Duplicate the slide you want, then edit its text in Normal view. Title and hold layouts use embedded looping MP4s with separate editable text and branding. Content and agenda slides use still backgrounds with a small transparent character GIF in the bottom-right corner. GIFs animate in Slide Show mode.
+Duplicate the slide you want, then edit its text in Normal view. Title and hold layouts use embedded looping MP4s with separate editable text and branding. Content and agenda slides use still backgrounds with a small transparent character GIF in the bottom-right corner. PowerPoint app callouts also use still backgrounds. Only title and hold slides contain video. GIFs animate in Slide Show mode.
 
 Keep video backgrounds behind the editable text. The Selection Pane helps select individual objects. The two elements pages retain separate artwork for copying into new layouts.
 
