@@ -16,7 +16,7 @@ try{
   assert.ok(options.includes('daily-agenda-editorial'));assert.ok(!options.some(id=>id.includes('toolkit-')));assert.ok(!options.includes('presentation-editorial-content'));await page.click('#loop-dialog [data-close]');
   await page.click('[data-tab="templates"]');await page.click('[data-category="agendas"]');assert.equal(await page.locator('[data-pick^="daily-agenda-"]').count(),2);await page.click('[data-pick="daily-agenda-night"]');
  });
- await check('Agendas have still backgrounds and bottom-left GIFs with Still and reduced-motion support',async()=>{
+ await check('Agendas have still backgrounds and bottom-right GIFs with Still and reduced-motion support',async()=>{
   for(const style of ['editorial','night']){
    await page.selectOption('select[data-agenda-style]',style);
    await page.waitForFunction(style=>document.querySelector('#draft-stage .scene')?.dataset.agendaStyle===style,style);
@@ -24,7 +24,7 @@ try{
    const accent=page.locator('#draft-stage .agenda-accent');await accent.waitFor();
    await page.waitForFunction(()=>document.querySelector('#draft-stage .agenda-accent')?.naturalWidth>0);
    assert.ok((await accent.getAttribute('src')).endsWith('-footer.gif'));
-   assert.deepEqual(await accent.evaluate(n=>[parseFloat(n.style.left),parseFloat(n.style.top)]),[95,1017]);
+   assert.deepEqual(await accent.evaluate(n=>[parseFloat(n.style.left),parseFloat(n.style.top)]),[1733.94,1017]);
    await page.screenshot({path:'_qa/agenda-still-'+style+'.png',fullPage:true});
   }
   await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>document.querySelector('#draft-stage .agenda-accent')?.src.endsWith('-still.png'));

@@ -22,7 +22,7 @@ The isolated session service is [hosted here](https://ucl-live-sessions.the-unco
 
 ## Screens and daily agendas
 
-The web library is organized into Titles, Agendas, Holds, Event app, and Countdowns. Titles use Modern Editorial, Big Type, Night Rodeo, and the session introduction. The broader content layouts remain in the 45-slide PowerPoint kit in the For Production Team handoff, with small animated character accents in the bottom-left content and agenda footers.
+The web library is organized into Titles, Agendas, Holds, Event app, and Countdowns. Titles use Modern Editorial, Big Type, Night Rodeo, and the session introduction. The broader content layouts remain in the 45-slide PowerPoint kit in the For Production Team handoff, with small animated character accents in the bottom-right content and agenda footers.
 
 Choose a screen, edit the preview, then Launch to Stage. Text appears first in the editor. Branding and motion controls sit under More options, and countdown end screens appear only when a timer is in use. Import, export, the guide, and PowerPoint are under More in the top bar. Icons keep the controls recognizable alongside their labels.
 

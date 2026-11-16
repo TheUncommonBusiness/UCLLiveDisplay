@@ -8,13 +8,13 @@ const box=(n,x,y,w,h)=>{Object.assign(n.style,{position:'absolute',left:x+'px',t
 const formatDate=value=>{if(!value)return '';return new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric',timeZone:'America/Chicago'}).format(new Date(value+'T12:00:00Z'))};
 const formatTime=value=>{if(!value)return '—';const [h,m]=value.split(':').map(Number);return `${h%12||12}:${String(m).padStart(2,'0')} ${h<12?'AM':'PM'}`};
 
-/** Daily agendas use still backgrounds and a small bottom-left character accent. */
+/** Daily agendas use still backgrounds and a small bottom-right character accent. */
 export function buildAgendaScene(preset,state,{showTimer=false}={}){
  const night=preset.agendaStyle==='night',root=el('div','scene daily-agenda-scene '+(night?'dark':'light')),meta=new Map(),videos=[],texts=[];
  Object.assign(root.style,{position:'absolute',inset:0,width:'1920px',height:'1080px',overflow:'hidden',isolation:'isolate',background:night?G:C,color:night?C:G});root.dataset.layout='daily-agenda';root.dataset.agendaStyle=night?'night':'editorial';root.setAttribute('role','region');root.setAttribute('aria-label',preset.title||'Daily agenda');
  let disposed=false,signature='',lastUpdate=-Infinity,timerNode;const cachedSchedule=sanitizeSchedule(preset.schedule);const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)'),film=night?'system-night-rodeo':'system-editorial-clean';
  const poster=el('img','agenda-poster');poster.alt='';poster.src=asset(night?'assets/agenda/night-background.jpg':'assets/media/'+film+'.jpg');box(poster,0,0,1920,1080);poster.style.objectFit='fill';root.append(poster);
- const accent=box(el('img','agenda-accent'),95,1017,86.06,56);accent.alt='';accent.setAttribute('aria-hidden','true');accent.style.objectFit='contain';accent.style.zIndex='2';root.append(accent);
+ const accent=box(el('img','agenda-accent'),1733.94,1017,86.06,56);accent.alt='';accent.setAttribute('aria-hidden','true');accent.style.objectFit='contain';accent.style.zIndex='2';root.append(accent);
  const motion=()=>{const still=preset.motion==='still'||Boolean(reduced?.matches);accent.dataset.still=String(still);const path='assets/agenda/accents/longhorn-'+(night?'cream':'forest')+(still?'-still.png':'-footer.gif');if(accent.src!==asset(path))accent.src=asset(path)};
  reduced?.addEventListener?.('change',motion);motion();
  const foreground=box(el('div','agenda-native'),0,0,1920,1080);foreground.style.zIndex='1';root.append(foreground);
@@ -50,7 +50,7 @@ export function buildAgendaScene(preset,state,{showTimer=false}={}){
     text(row,'time-'+item.id,formatTime(item.time),20,26,210,58,31,{color:fg});if(tag)text(row,'tag-'+item.id,tag,275,8,1000,24,14,{color:current?L:'#61715C',spacing:2});text(row,'session-'+item.id,item.title||'Untitled session',275,tag?30:19,1000,63,47,{font:'Season',color:fg});text(row,'speaker-'+item.id,item.speaker,1325,28,370,55,27,{color:muted});
    }
   });
-  rule(rows,90,1014,1730,night?'#FDFFF230':'#19252030');text(rows,'footer',!night&&next?'UP NEXT  ·  '+formatTime(next.time)+'  /  '+(next.title||'Untitled session'):'UNCOMMON LEADERS LIVE / AUSTIN',230,1033,990,32,17,{color:night?'#BAC6AF':'#61715C',spacing:2});text(rows,'page-footer',pageLabel,1250,1033,570,32,17,{color:night?'#BAC6AF':'#61715C',align:'right'});fit();
+  rule(rows,90,1014,1730,night?'#FDFFF230':'#19252030');text(rows,'footer',!night&&next?'UP NEXT  ·  '+formatTime(next.time)+'  /  '+(next.title||'Untitled session'):'UNCOMMON LEADERS LIVE / AUSTIN',95,1033,1100,32,17,{color:night?'#BAC6AF':'#61715C',spacing:2});text(rows,'page-footer',pageLabel,1250,1033,400,32,17,{color:night?'#BAC6AF':'#61715C',align:'right'});fit();
  };
  update(clockNow());return {root,meta,videos,fit,update,updateTimer(value){if(timerNode)timerNode.textContent=value},dispose(){disposed=true;reduced?.removeEventListener?.('change',motion);root.remove()}};
 }
