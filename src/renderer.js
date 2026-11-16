@@ -32,12 +32,15 @@ export function buildScene(preset,state,{showTimer=false}={}){
  let timerNode;
  if(preset.layout==='media'){
   const info=mediaInfo(preset.assetId,state);const n=el(info?.type==='video'?'video':'img','full-media');n.style.objectFit='contain';
-  if(info?.type==='video'){n.muted=true;n.loop=true;n.autoplay=true;n.playsInline=true;n.preload='auto';if(info.poster)n.poster=info.poster;videos.push(n)}else n.alt=info?.name||'';
-  root.append(n);mediaURL(preset.assetId).then(url=>{if(disposed)return;n.src=url;if(info?.type==='video')n.play().catch(()=>{})}).catch(error=>{if(!disposed){root.replaceChildren(el('div','media-error',error.message))}});
+  if(info?.type==='video'){n.muted=true;n.loop=true;n.autoplay=preset.motion!=='still';n.dataset.still=String(preset.motion==='still');n.playsInline=true;n.preload='auto';if(info.poster)n.poster=info.poster;videos.push(n)}else n.alt=info?.name||'';
+  root.append(n);mediaURL(preset.assetId).then(url=>{if(disposed)return;n.src=url;if(info?.type==='video'&&n.autoplay)n.play().catch(()=>{})}).catch(error=>{if(!disposed){root.replaceChildren(el('div','media-error',error.message))}});
  }else{
-  if(preset.theme==='dark')stars(root,preset);
+  if(preset.theme==='dark'&&preset.layout!=='logo')stars(root,preset);
   if(preset.layout==='logo'){
-   mask('cowgirl','cowgirl.svg',150,192,530,709,fg,'cowgirl');mask('logo','leaders-logo.svg',815,385,970,312);
+   if(preset.theme==='dark'){
+    const info=mediaInfo('cowgirl-background',state),v=el('video','full-media');v.muted=true;v.loop=true;v.autoplay=preset.motion!=='still';v.dataset.still=String(preset.motion==='still');v.playsInline=true;v.preload='auto';v.poster=info.poster;v.src=info.url;root.append(v);videos.push(v);if(v.autoplay)v.play().catch(()=>{});
+    mask('logo','leaders-logo.svg',850,350,965,310.42);
+   }else{mask('cowgirl','cowgirl.svg',150,192,530,709,fg,'cowgirl');mask('logo','leaders-logo.svg',815,385,970,312)}
   }else if(preset.layout==='range'){
    mask('logo','leaders-logo.svg',105,105,470,151);
    img('horse','horse.png',880,255,960,640,'horse');

@@ -1,0 +1,147 @@
+// Finished films match the production PowerPoint and MP4 handoff.
+export const PRODUCTION_MEDIA=[
+  {
+    "id": "cowgirl-film",
+    "name": "Cowgirl \u00b7 hat tip",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/01-cowgirl-hat-tip-4k.mp4",
+    "poster": "assets/production/01-cowgirl-hat-tip-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "stars-film",
+    "name": "Uncommon Leaders \u00b7 stars",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/02-uncommon-leaders-stars-4k.mp4",
+    "poster": "assets/production/02-uncommon-leaders-stars-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "production-longhorn-film",
+    "name": "Longhorn horizon",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/03-longhorn-4k.mp4",
+    "poster": "assets/production/03-longhorn-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "production-roping-cowboy-film",
+    "name": "Roping cowboy",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/04-roping-cowboy-4k.mp4",
+    "poster": "assets/production/04-roping-cowboy-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "production-dancing-cowgirl-film",
+    "name": "Dancing cowgirl",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/05-dancing-cowgirl-4k.mp4",
+    "poster": "assets/production/05-dancing-cowgirl-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "production-capitol-film",
+    "name": "Capitol night",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/06-austin-capitol-4k.mp4",
+    "poster": "assets/production/06-austin-capitol-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "production-quiet-range-film",
+    "name": "Quiet range \u00b7 finished film",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/07-quiet-range-4k.mp4",
+    "poster": "assets/production/07-quiet-range-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "production-badge-film",
+    "name": "Austin intermission \u00b7 finished film",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/08-intermission-4k.mp4",
+    "poster": "assets/production/08-intermission-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "production-pattern-film",
+    "name": "Austin pattern \u00b7 finished film",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/09-austin-pattern-4k.mp4",
+    "poster": "assets/production/09-austin-pattern-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
+  },
+  {
+    "id": "app-editorial-film",
+    "name": "Event app \u00b7 editorial",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/10-event-app-editorial-4k.mp4",
+    "poster": "assets/production/10-event-app-editorial-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "apps",
+    "duration": 15
+  },
+  {
+    "id": "app-big-type-film",
+    "name": "Event app \u00b7 big type",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/11-event-app-big-type-4k.mp4",
+    "poster": "assets/production/11-event-app-big-type-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "apps",
+    "duration": 15
+  },
+  {
+    "id": "app-fullscreen-film",
+    "name": "Event app \u00b7 night",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/12-event-app-night-4k.mp4",
+    "poster": "assets/production/12-event-app-night-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "apps",
+    "duration": 10
+  }
+];

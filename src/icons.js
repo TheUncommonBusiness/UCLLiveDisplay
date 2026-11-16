@@ -3,6 +3,7 @@ const paths={
  title:'M4 5h16M12 5v14M8 19h8M4 5v3M20 5v3',
  agenda:'M8 5h12M8 12h12M8 19h12M3 5h.01M3 12h.01M3 19h.01',
  hold:'M9 7v10M15 7v10',
+ phone:'M7 2h10v20H7zM10 5h4M11 19h2',
  timer:'M9 2h6M12 2v3M18 5l2 2M12 10v4l3 2|circle:12,14,8',
  bookmark:'M6 3h12v18l-6-4-6 4z',
  screen:'M3 4h18v13H3zM12 17v4M8 21h8',

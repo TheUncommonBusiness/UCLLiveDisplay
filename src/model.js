@@ -1,6 +1,7 @@
 import {AGENDA_PRESETS,sanitizeSchedule} from './agenda.js';
 import {PRESENTATION_SCENES,getPresentationScene} from '../assets/presentation-system/scenes.js';
 import {now as currentTime} from './clock.js';
+import {PRODUCTION_MEDIA} from '../assets/production/catalog.js';
 export const VERSION=1;
 export const clone=x=>structuredClone(x);
 export const uid=prefix=>prefix+'-'+crypto.randomUUID();
@@ -20,18 +21,21 @@ export const TEMPLATES=[
  preset('session','Session introduction','session',{eyebrow:'UP NEXT',title:'Uncommon\nLeaders Live',subtitle:'Ideas into action.'}),
  preset('agenda','Agenda','agenda',{title:"What's ahead.",agenda:['Welcome & connection','Sessions & live builds','Breaks & conversations'],theme:'light'}),
  preset('starting','We’re starting','badge',{title:"We're\nstarting.",subtitle:'Welcome back.',theme:'light'}),
- preset('film','4K logo film','media',{kind:'media',assetId:'stars-film'}),
- preset('cowgirl-moment','Cowgirl · a moment of motion','media',{kind:'media',assetId:'cowgirl-film'}),
+ preset('film','Uncommon Leaders · stars','media',{kind:'media',assetId:'stars-film'}),
+ preset('cowgirl-moment','Cowgirl · hat tip','media',{kind:'media',assetId:'cowgirl-film'}),
  ...PRESENTATION_TEMPLATES,
- ...AGENDA_PRESETS
+ ...AGENDA_PRESETS,
+ ...PRODUCTION_MEDIA.filter(m=>!['cowgirl-film','stars-film'].includes(m.id)).map(m=>preset(m.id,m.name,'media',{kind:'media',assetId:m.id}))
 ];
 export const BUILTIN_MEDIA={
- 'cowgirl-film':{id:'cowgirl-film',name:'Cowgirl · motion every 15 seconds',type:'video',mime:'video/mp4',url:'assets/media/character-hat-tip-4k.mp4',poster:'assets/media/character-hat-tip-4k.jpg',builtin:true},
+ 'cowgirl-film':{id:'cowgirl-film',name:'Cowgirl · motion every 10 seconds',type:'video',mime:'video/mp4',url:'assets/media/character-hat-tip-4k.mp4',poster:'assets/media/character-hat-tip-4k.jpg',builtin:true},
  'range-film':{id:'range-film',name:'Quiet range background',type:'video',mime:'video/mp4',url:'assets/media/quiet-range-4k.mp4',poster:'assets/media/quiet-range-4k.jpg',builtin:true},
  'badge-film':{id:'badge-film',name:'Intermission background',type:'video',mime:'video/mp4',url:'assets/media/badge-4k.mp4',poster:'assets/media/badge-4k.jpg',builtin:true},
  'pattern-film':{id:'pattern-film',name:'Austin pattern background',type:'video',mime:'video/mp4',url:'assets/media/pattern-4k.mp4',poster:'assets/media/pattern-4k.jpg',builtin:true},
  'stars-film':{id:'stars-film',name:'Uncommon Leaders · 4K logo film',type:'video',mime:'video/mp4',url:'assets/media/leaders-stars-4k.mp4',poster:'assets/media/leaders-stars-4k.jpg',builtin:true},
- ...Object.fromEntries(Array.from({length:10},(_,i)=>{const names=['leadership','kinsey','carter','curriculum','student-success','client-success','advisors','enrollment','people','ops-build'];return ['team-'+i,{id:'team-'+i,name:'TUB team · '+names[i].replaceAll('-',' '),type:'image',mime:'image/jpeg',url:'assets/slides/tub-team/'+String(i+1).padStart(2,'0')+'-'+names[i]+'.jpg',builtin:true}]}))
+ ...Object.fromEntries(Array.from({length:10},(_,i)=>{const names=['leadership','kinsey','carter','curriculum','student-success','client-success','advisors','enrollment','people','ops-build'];return ['team-'+i,{id:'team-'+i,name:'TUB team · '+names[i].replaceAll('-',' '),type:'image',mime:'image/jpeg',url:'assets/slides/tub-team/'+String(i+1).padStart(2,'0')+'-'+names[i]+'.jpg',builtin:true}]})),
+ 'cowgirl-background':{id:'cowgirl-background',type:'video',mime:'video/mp4',url:'assets/production/cowgirl-background.mp4',poster:'assets/production/cowgirl-background.jpg',builtin:true},
+ ...Object.fromEntries(PRODUCTION_MEDIA.map(m=>[m.id,m]))
 };
 export function getPreset(state,id){return [...state.presets,...TEMPLATES].find(p=>p.id===id)||TEMPLATES[0]}
 export const isTimer=p=>p.kind==='countdown';
@@ -39,7 +43,7 @@ export function itemFromPreset(p,seconds=12,transition='fade'){return {id:uid('i
 export function newProgram(p,now=currentTime()){return {id:uid('program'),kind:'preset',preset:clone(p),startedAt:now,pausedAt:null}}
 export function newFeed(id,name,now=currentTime()){return {id,name,program:newProgram(TEMPLATES[9],now),timer:null,endPreset:clone(TEMPLATES[8]),blackout:false}}
 export function defaultState(now=currentTime()){
- const loop={id:'austin-loop',name:'Austin hold collection',items:TEMPLATES.slice(0,4).map((p,i)=>itemFromPreset(p,12,i===1?'morph':'fade')),timerSeconds:0};
+ const loop={id:'austin-loop',name:'Austin hold collection',items:PRODUCTION_MEDIA.filter(m=>m.category==='holds').map(m=>itemFromPreset(TEMPLATES.find(p=>p.assetId===m.id),12,'fade')),timerSeconds:0};
  const team={id:'team-loop',name:'Get to know the TUB team',items:Object.values(BUILTIN_MEDIA).filter(m=>m.id.startsWith('team-')).map(m=>itemFromPreset(preset(m.id,m.name,'media',{kind:'media',assetId:m.id}),12,'fade')),timerSeconds:0};
  const main=newFeed('main','Main stage',now),support=newFeed('support','Supporting displays',now);
  support.program={id:uid('program'),kind:'loop',name:loop.name,items:clone(loop.items),startedAt:now,pausedAt:null};

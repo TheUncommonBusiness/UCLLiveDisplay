@@ -25,7 +25,7 @@ function drawFeeds(){
 function drawLibrary(){
  $('#library-tabs').querySelectorAll('button').forEach(b=>{b.classList.toggle('active',b.dataset.tab===tab);b.setAttribute('aria-pressed',String(b.dataset.tab===tab))});
  const saved=state.presets.filter(screenCategory);$('#screen-categories').hidden=tab!=='templates';
- $('#screen-categories').innerHTML=SCREEN_CATEGORIES.filter(([id])=>id!=='saved'||saved.length).map(([id,name])=>`<button data-category="${id}" data-icon="${({titles:'title',agendas:'agenda',holds:'hold',countdowns:'timer',saved:'bookmark'})[id]}" class="${screenGroup===id?'active':''}" aria-pressed="${screenGroup===id}">${name}${id==='saved'?' · '+saved.length:''}</button>`).join('');
+ $('#screen-categories').innerHTML=SCREEN_CATEGORIES.filter(([id])=>id!=='saved'||saved.length).map(([id,name])=>`<button data-category="${id}" data-icon="${({titles:'title',agendas:'agenda',holds:'hold',apps:'phone',countdowns:'timer',saved:'bookmark'})[id]}" class="${screenGroup===id?'active':''}" aria-pressed="${screenGroup===id}">${name}${id==='saved'?' · '+saved.length:''}</button>`).join('');
  let html='';
  const card=(p,caption,kind='preset',id=p.id)=>`<button class="template-card ${draft.kind==='preset'&&draft.preset.id===p.id?'selected':''}" data-pick="${esc(id)}" data-kind="${kind}"><img class="template-thumb" src="${thumb(p)}" alt="" loading="lazy"><span class="name">${esc(p.name)}</span><span class="caption">${esc(caption)}</span></button>`;
  if(tab==='templates'){
