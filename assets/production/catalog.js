@@ -143,5 +143,29 @@ export const PRODUCTION_MEDIA=[
     "production": true,
     "category": "apps",
     "duration": 10
+  },
+  {
+    "id": "app-editorial-dark-film",
+    "name": "Event app \u00b7 Editorial dark",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/13-event-app-editorial-dark-4k.mp4",
+    "poster": "assets/production/13-event-app-editorial-dark-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "apps",
+    "duration": 10
+  },
+  {
+    "id": "austin-pattern-dark-film",
+    "name": "Austin pattern \u00b7 Dark",
+    "type": "video",
+    "mime": "video/mp4",
+    "url": "assets/production/14-austin-pattern-dark-4k.mp4",
+    "poster": "assets/production/14-austin-pattern-dark-4k.jpg",
+    "builtin": true,
+    "production": true,
+    "category": "holds",
+    "duration": 10
   }
 ];

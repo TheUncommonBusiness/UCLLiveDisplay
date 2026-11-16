@@ -22,7 +22,7 @@ The isolated session service is [hosted here](https://ucl-live-sessions.the-unco
 
 ## Screens and daily agendas
 
-The web library is organized into Titles, Agendas, Holds, Event app, and Countdowns. Titles use Modern Editorial, Big Type, Night Rodeo, and the session introduction. The broader content layouts remain in the 42-slide PowerPoint kit in the For Production Team handoff, with small animated character accents in the content and agenda footers.
+The web library is organized into Titles, Agendas, Holds, Event app, and Countdowns. Titles use Modern Editorial, Big Type, Night Rodeo, and the session introduction. The broader content layouts remain in the 45-slide PowerPoint kit in the For Production Team handoff, with small animated character accents in the bottom-left content and agenda footers.
 
 Choose a screen, edit the preview, then Launch to Stage. Text appears first in the editor. Branding and motion controls sit under More options, and countdown end screens appear only when a timer is in use. Import, export, the guide, and PowerPoint are under More in the top bar. Icons keep the controls recognizable alongside their labels.
 
@@ -38,7 +38,7 @@ The overview shows six sessions per page and rotates every 15 seconds. Choosing 
 - Clock-based countdowns that switch to a chosen hold at zero.
 - Slide loops with per-slide timing and Snap, Fade, Slide, Soft zoom, or Smart Morph transitions.
 - Fit, Fill, Stretch, margin, and monitor placement per output.
-- Twelve finished 3840 × 2160, 30fps, silent looping films matching the production PowerPoint: nine holds and three event-app callouts. The hold films have ten-second cycles with visible stars and occasional character gestures.
+- Fourteen finished 3840 × 2160, 30fps, silent looping films matching the production PowerPoint: ten holds and four event-app callouts. The hold films have ten-second cycles with visible stars and occasional character gestures.
 - Offline caching of application files and built-in media after the first complete load.
 
 ## Local use

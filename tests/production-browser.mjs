@@ -11,7 +11,7 @@ page.on('pageerror',e=>errors.push(e.message));
 try{
  await page.goto(base);await page.waitForSelector('#draft-stage .scene');
  const films=await page.evaluate(async()=> (await import('./assets/production/catalog.js')).PRODUCTION_MEDIA);
- assert.equal(films.length,12);
+ assert.equal(films.length,14);
  for(const film of films){
   await page.click('[data-tab="templates"]');await page.click('[data-category="'+film.category+'"]');
   const id=film.id==='cowgirl-film'?'cowgirl-moment':film.id==='stars-film'?'film':film.id;
@@ -48,5 +48,5 @@ try{
  for(let i=0;i<films.length;i++)assert.equal(hashes[i].sha256,crypto.createHash('sha256').update(await fs.readFile(films[i].url)).digest('hex'));
  assert.deepEqual(errors,[]);
  await fs.writeFile('_qa/production-browser-results.json',JSON.stringify({base,films:results,hashes,independentLaunch:true,loopRoundtrip:true,errors},null,2));
- console.log('PASS 12 final 4K films, separate stage launch, all loop options, and saved-show roundtrip at '+base);
+ console.log('PASS '+films.length+' final 4K films, separate stage launch, all loop options, and saved-show roundtrip at '+base);
 }finally{await browser.close()}

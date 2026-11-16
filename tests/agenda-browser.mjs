@@ -16,6 +16,28 @@ try{
   assert.ok(options.includes('daily-agenda-editorial'));assert.ok(!options.some(id=>id.includes('toolkit-')));assert.ok(!options.includes('presentation-editorial-content'));await page.click('#loop-dialog [data-close]');
   await page.click('[data-tab="templates"]');await page.click('[data-category="agendas"]');assert.equal(await page.locator('[data-pick^="daily-agenda-"]').count(),2);await page.click('[data-pick="daily-agenda-night"]');
  });
+ await check('Agendas have still backgrounds and bottom-left GIFs with Still and reduced-motion support',async()=>{
+  for(const style of ['editorial','night']){
+   await page.selectOption('select[data-agenda-style]',style);
+   await page.waitForFunction(style=>document.querySelector('#draft-stage .scene')?.dataset.agendaStyle===style,style);
+   assert.equal(await page.locator('#draft-stage video').count(),0);
+   const accent=page.locator('#draft-stage .agenda-accent');await accent.waitFor();
+   await page.waitForFunction(()=>document.querySelector('#draft-stage .agenda-accent')?.naturalWidth>0);
+   assert.ok((await accent.getAttribute('src')).endsWith('-footer.gif'));
+   assert.deepEqual(await accent.evaluate(n=>[parseFloat(n.style.left),parseFloat(n.style.top)]),[95,1017]);
+   await page.screenshot({path:'_qa/agenda-still-'+style+'.png',fullPage:true});
+  }
+  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>document.querySelector('#draft-stage .agenda-accent')?.src.endsWith('-still.png'));
+  await page.emulateMedia({reducedMotion:'no-preference'});await page.waitForFunction(()=>document.querySelector('#draft-stage .agenda-accent')?.src.endsWith('-footer.gif'));
+  await page.click('.more-options summary');await page.selectOption('[data-field="motion"]','still');
+  await page.waitForFunction(()=>document.querySelector('#draft-stage .agenda-accent')?.src.endsWith('-still.png'));
+  await page.selectOption('[data-field="motion"]','normal');await page.click('.more-options summary');
+  const motion=await page.evaluate(async()=>{
+   const {buildScene}=await import('./src/renderer.js'),{TEMPLATES,defaultState}=await import('./src/model.js');
+   return ['presentation-editorial-content','presentation-editorial-opening'].map(id=>{const scene=buildScene(TEMPLATES.find(t=>t.id===id),defaultState());const result={id,videos:scene.videos.length};scene.dispose();return result});
+  });
+  assert.equal(motion[0].videos,0);assert.equal(motion[1].videos,1);
+ });
  const before=(await state(page)).feeds[0].program.id;
  await check('Each day has editable times, titles, speakers and independent rows',async()=>{
   await page.click('[data-agenda-edit]');await page.fill('#agenda-day-name','Day 1 · Welcome');

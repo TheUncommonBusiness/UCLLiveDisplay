@@ -35,8 +35,10 @@ export function buildPresentationScene(preset,state,{showTimer=false}={}){
  const fields={...scene.defaultFields,...preset.fields};
  if(media){
   const poster=node('img','presentation-poster');poster.alt='';poster.src=assetURL(media.poster);Object.assign(poster.style,{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'fill',zIndex:0});root.append(poster);
+  if(scene.role==='opening'||['toolkit-section','toolkit-big-idea'].includes(scene.id)){
   video=node('video','presentation-film');video.muted=true;video.loop=true;video.playsInline=true;video.preload='auto';video.poster=assetURL(media.poster);video.src=assetURL(media.video);Object.assign(video.style,{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'fill',zIndex:0});
   video.addEventListener('error',()=>{video.style.display='none';video.dataset.still='true';root.dataset.mediaError='true';root.dispatchEvent(new CustomEvent('presentation-media-error',{bubbles:true,detail:{sceneId:scene.id,video:media.video}}))});root.append(video);videos.push(video);
+  }
  }
  const applyMotion=()=>{if(!video||disposed)return;const still=preset.motion==='still'||Boolean(reduced?.matches);video.dataset.still=String(still);video.autoplay=!still;video.style.visibility=still?'hidden':'visible';if(still){video.pause();try{video.currentTime=0}catch{}}else video.play().catch(()=>{})};
  reduced?.addEventListener?.('change',applyMotion);applyMotion();
